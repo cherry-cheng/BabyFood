@@ -1,0 +1,49 @@
+page-home {
+
+    .toolbar-background {
+        border-width: 0 0 0 !important;
+        background-color: transparent !important;
+    }
+
+    .div .searchbar-search-icon {
+        width: 24px;
+        height: 24px;
+        color: #000000;
+    }
+
+    .div1 {
+        margin-left: 16px
+    }
+
+    .pic1 {
+
+    }
+
+    .title {
+        font-size: 17px;
+        color: #000000;
+        font-family:PingFang-SC-Bold;
+        font-weight:bold;
+        margin-left: 8px;
+    }
+
+    .recipe_grid {
+        padding: 0px !important;
+        margin-top: 10px;
+    }
+    .recipe_class_wrap {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .recipe_item {
+        border: 1px rgba(255, 0, 0, 0.05);
+        border-radius: 2px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: center;
+        font-size: 15px;
+        color: #000000;
+        margin: 12px;
+        background-color: rgba(255, 0, 0, 0.05);
+    }
+}

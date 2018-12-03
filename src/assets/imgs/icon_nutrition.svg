@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="25px" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_nutrition</title>
+    <desc>Created with Sketch.</desc>
+    <g id="分类" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-16.000000, -351.000000)" id="Group-7-Copy-4">
+            <g transform="translate(0.000000, 338.000000)">
+                <g id="Group-8" transform="translate(0.000000, 0.000000)">
+                    <g id="Group-3" transform="translate(16.000000, 13.000000)">
+                        <rect id="Rectangle" fill="#D8D8D8" fill-rule="nonzero" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                        <path d="M10.0005235,4 L9,4 C8.44771525,4 8,3.55228475 8,3 C8,2.44771525 8.44771525,2 9,2 L15,2 C15.5522847,2 16,2.44771525 16,3 C16,3.55228475 15.5522847,4 15,4 L14,4 L18.0289915,6.41739491 C18.6314023,6.7788414 19,7.42985505 19,8.13238076 L19,20 C19,21.1045695 18.1045695,22 17,22 L7,22 C5.8954305,22 5,21.1045695 5,20 L5,8.13244175 C5,7.42988312 5.36863195,6.77884399 5.9710877,6.41740838 L10.0005235,4 Z" id="Combined-Shape" fill="#C8BBE9" fill-rule="nonzero"></path>
+                        <path d="M13.7267081,9 C13.0559006,9 12.3975155,9.3 11.9627329,9.8 C11.5279503,9.3 10.9440994,9 10.2732919,9 C9.01863354,9 8,10 8,11.2375 C8,13.25 9.86335404,14.5 11.0931677,15.3375 C11.300207,15.4791667 11.5900621,15.7 11.9627329,16 C12.3850932,15.7 12.699793,15.4791667 12.9068323,15.3375 C14.136646,14.5 16,13.25 16,11.2375 C15.9875776,10 14.9689441,9 13.7267081,9 Z" id="Combined-Shape" fill="#FFFFFF" opacity="0.389999986"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

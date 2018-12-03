@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_foodyingyang</title>
+    <desc>Created with Sketch.</desc>
+    <g id="分类" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-16.000000, -513.000000)" id="Group-7-Copy">
+            <g transform="translate(0.000000, 500.000000)">
+                <g id="Group-8">
+                    <g id="Group-4" transform="translate(16.000000, 13.000000)">
+                        <rect id="Rectangle" fill="#D8D8D8" fill-rule="nonzero" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                        <g id="营养评估" transform="translate(2.000000, 2.000000)">
+                            <g id="Group" transform="translate(0.460939, 0.332033)">
+                                <path d="M10.3188929,0.806369688 L10.3188929,10.0313199 L0.939426874,9.14044989 C0.910455591,9.43257758 0.893555532,9.72953495 0.893555532,10.028905 C0.893555532,15.1230281 4.97610716,19.2538552 10.0122868,19.2538552 C15.0484665,19.2538552 19.1310182,15.1230281 19.1310182,10.028905 C19.1334324,4.93478191 15.3550919,0.806361095 10.3188907,0.806361095 L10.3188929,0.806369688 Z" id="Path" fill="#F9EA9E"></path>
+                                <path d="M8.28846668,8.25684164 L8.28846668,0 C4.19626855,0.395942453 0.86938773,3.44033994 0.0002578128,7.41907895 L8.28846668,8.25684164 Z" id="Path" fill="#FBF2BF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
