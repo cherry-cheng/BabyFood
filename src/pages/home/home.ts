@@ -1,3 +1,4 @@
+import { DetailRecipePage } from './../detail-recipe/detail-recipe';
 import { Component } from '@angular/core';
 import { NavController, NavParams, Events } from 'ionic-angular';
 
@@ -12,7 +13,7 @@ export class HomePage {
   recipeList: string[] = [];
 
   recipiItem: string = '6-7个月'
-  
+
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public event: Events) {
@@ -23,7 +24,11 @@ export class HomePage {
 
 
   gotoSearch(ev: any) {
-    
+
+  }
+
+  gotoDetail() {
+    this.navCtrl.push(DetailRecipePage, { "title" : '食谱'});
   }
 
 }

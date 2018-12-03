@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-searchbar placeholder="宝宝肉松" (input)="gotoSearch($event)" searchbar-md-input-search-icon-svg="../../assets/imgs/ic_search_black.svg" 
+    <ion-searchbar placeholder="宝宝肉松" (input)="gotoSearch($event)" searchbar-md-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"
     searchbar-ios-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
@@ -12,7 +12,7 @@
   </div>
     <ion-grid class="recipe_grid">
       <ion-row class="recipe_class_wrap" justify-content-center grid-co>
-        <ion-col col-3 *ngFor="let item of recipeList" class="recipe_item">{{item}}</ion-col>
+        <ion-col col-3 *ngFor="let item of recipeList" class="recipe_item" (click)="gotoDetail()">{{item}}</ion-col>
       </ion-row>
       <span style="margin-top: -2px; background: #e6e9ee; width: 100%; height: 8px;"></span>
     </ion-grid>
