@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_filtration</title>
+    <desc>Created with Sketch.</desc>
+    <g id="分类" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="分类-二级分类-孕期产后不可筛选营养功效" transform="translate(-126.000000, -78.000000)">
+            <g id="Group-4">
+                <g id="Group-11" transform="translate(0.000000, 64.000000)">
+                    <g id="Group-10">
+                        <g id="Group-8" transform="translate(88.000000, 12.000000)">
+                            <g id="Group-9" transform="translate(38.000000, 2.000000)">
+                                <circle id="Oval-3" fill="#F8F8F8" cx="9" cy="9" r="9"></circle>
+                                <polyline id="Path-2" stroke="#9F9F9F" stroke-linecap="round" stroke-linejoin="round" transform="translate(9.000000, 9.000000) rotate(90.000000) translate(-9.000000, -9.000000) " points="7 5 11 9 7 13"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

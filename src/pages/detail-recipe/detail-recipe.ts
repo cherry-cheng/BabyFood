@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, ToastController } from 'ionic-angular';
 import { BaseUI } from '../../common/baseui';
 
 /**
@@ -17,11 +17,14 @@ import { BaseUI } from '../../common/baseui';
 export class DetailRecipePage extends BaseUI {
   title: string;
 
-  constructor(public navCtrl: NavController,
+  constructor(
+    public navCtrl: NavController,
     public navParams: NavParams,
-    public viewCtrl: ViewController) {
-      super();
-    }
+    public viewCtrl: ViewController,
+    public toastCtrl: ToastController
+  ) {
+    super();
+  }
 
   ionViewDidLoad() {
     this.title = this.navParams.get("title");
@@ -29,5 +32,14 @@ export class DetailRecipePage extends BaseUI {
 
   dismiss() {
     this.viewCtrl.dismiss();
+  }
+
+  gotoChoose(id : any) {
+    if(id == 1) {
+      super.showToast(this.toastCtrl, "id等于1");
+    }
+    if(id == 2) {
+      super.showToast(this.toastCtrl, "id等于2");
+    }
   }
 }
