@@ -13,13 +13,15 @@
 
   <ion-toolbar>
     <div class="row responsive-break">
-      <div class="col" style="width: 100%" (click)="gotoChoose(1)">
-        <span>产后</span>
-        <img src="../../assets/imgs/icon_filtration.svg" />
+      <div class="col" style="width: 100%;" (click)="gotoChoose(1)">
+        <span>产后
+          <img src="../../assets/imgs/icon_filtration.svg" />
+        </span>
       </div>
       <div class="col" style="width: 100%" (click)="gotoChoose(2)">
-        <span>按营养功效选择</span>
-        <img src="../../assets/imgs/icon_filtration.svg" />
+        <span>按营养功效选择
+          <img src="../../assets/imgs/icon_filtration.svg" />
+        </span>
       </div>
     </div>
   </ion-toolbar>
@@ -28,7 +30,7 @@
 
 <ion-content>
   <ion-list style="background-color: white">
-    <ion-item ion-item>
+    <ion-item ion-item *ngFor="let item1 of testList">
       <img item-left src="../../assets/imgs/img_lists_placeholder.svg">
       <div class="item_right_div">
         <p>西湖路韭菜盒子</p>

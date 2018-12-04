@@ -32,6 +32,7 @@ page-detail-recipe {
     img {
       float: none;
       text-align: center;
+      vertical-align: middle;
     }
   }
 
@@ -54,6 +55,7 @@ page-detail-recipe {
       font-family: PingFang-SC-Bold;
       font-weight: bold;
       color: rgba(0, 0, 0, 1);
+      margin: 0;
     }
   }
 
@@ -66,12 +68,12 @@ page-detail-recipe {
       font-weight:500;
       color:rgba(155, 155, 155, 1);
       line-height:16px;
-      padding-top: 8px;
     }
   }
 
   .item .item-inner {
     display: inline;
+    border-bottom: 0px !important;
   }
 
   .item .label {

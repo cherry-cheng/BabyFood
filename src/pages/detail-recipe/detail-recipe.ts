@@ -18,7 +18,9 @@ export class DetailRecipePage extends BaseUI {
   title: string;
   recipeList: string[] = [];
 
-  recipiItem: string = "#6-7个月";
+  testList: string[] = [];
+
+  recipiItem: string = "#6-7";
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -28,6 +30,9 @@ export class DetailRecipePage extends BaseUI {
     super();
     for (let i = 0; i < 3; i++) {
       this.recipeList.push(this.recipiItem);
+    }
+    for (let n = 0; n < 12; n++) {
+      this.testList.push(this.recipiItem);
     }
   }
 
