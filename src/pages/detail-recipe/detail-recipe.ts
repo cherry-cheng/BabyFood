@@ -16,7 +16,9 @@ import { BaseUI } from '../../common/baseui';
 })
 export class DetailRecipePage extends BaseUI {
   title: string;
+  recipeList: string[] = [];
 
+  recipiItem: string = "#6-7个月";
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -24,6 +26,9 @@ export class DetailRecipePage extends BaseUI {
     public toastCtrl: ToastController
   ) {
     super();
+    for (let i = 0; i < 3; i++) {
+      this.recipeList.push(this.recipiItem);
+    }
   }
 
   ionViewDidLoad() {
@@ -34,11 +39,11 @@ export class DetailRecipePage extends BaseUI {
     this.viewCtrl.dismiss();
   }
 
-  gotoChoose(id : any) {
-    if(id == 1) {
+  gotoChoose(id: any) {
+    if (id == 1) {
       super.showToast(this.toastCtrl, "id等于1");
     }
-    if(id == 2) {
+    if (id == 2) {
       super.showToast(this.toastCtrl, "id等于2");
     }
   }

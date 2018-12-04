@@ -8,24 +8,35 @@
 
   <ion-navbar hideBackButton="true">
     <ion-title>{{title}}</ion-title>
-    <img src="../../assets/imgs/ic_back_black.svg" (click)="dismiss()"/>
+    <img src="../../assets/imgs/ic_back_black.svg" (click)="dismiss()" />
   </ion-navbar>
 
   <ion-toolbar>
     <div class="row responsive-break">
       <div class="col" style="width: 100%" (click)="gotoChoose(1)">
-      <span>产后</span>
-      <img src="../../assets/imgs/icon_filtration.svg" />
+        <span>产后</span>
+        <img src="../../assets/imgs/icon_filtration.svg" />
       </div>
       <div class="col" style="width: 100%" (click)="gotoChoose(2)">
-      <span>按营养功效选择</span>
-      <img src="../../assets/imgs/icon_filtration.svg" />
+        <span>按营养功效选择</span>
+        <img src="../../assets/imgs/icon_filtration.svg" />
       </div>
     </div>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <ion-list style="background-color: white">
+    <ion-item ion-item>
+      <img item-left src="../../assets/imgs/img_lists_placeholder.svg">
+      <div class="item_right_div">
+        <p>西湖路韭菜盒子</p>
+        <ul class="ulItem clearFix">
+          <li *ngFor="let item of recipeList" style="background:rgba(247,247,247,1);"> {{item}}</li>
+        </ul>
+        <span>1239人已收藏</span>
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>
