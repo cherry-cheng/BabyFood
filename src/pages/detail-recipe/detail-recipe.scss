@@ -1,4 +1,54 @@
 page-detail-recipe {
+
+  #navMy {
+    display: block;
+    background-color: #f9f9f9;
+    background-size: 100% 44px;
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+  }
+
+  .navMy-left {
+    width: 40px;
+    height: 44px;
+    position: absolute;
+  }
+
+  .navMy-left img {
+    //src:url('../');
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .navMy-center {
+    display: flex;
+    height: 44px;
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navMy-center span {
+    font-size:17px;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(0, 0, 0, 1);
+    line-height:24px;
+  }
+
+  .navMy-right {
+    width: 40px;
+    height: 44px;
+    position: absolute;
+    right: 0;
+  }
+
+
+
   .header {
     background-color: #ffffff;
   }
