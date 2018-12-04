@@ -20,6 +20,8 @@ export class DetailRecipePage extends BaseUI {
 
   testList: string[] = [];
 
+  monthRange: string[] = ['孕期', '产后', '6-7个月', '8-9个月', '10-12个月', '1-2岁', '2-3岁', '3岁以上']
+
   recipiItem: string = "#6-7";
   constructor(
     public navCtrl: NavController,
