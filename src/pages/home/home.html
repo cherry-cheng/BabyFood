@@ -10,43 +10,52 @@
     <img class="pic1" src="../../assets/imgs/icon_recipes.svg"/>
     <span class="title">月龄食谱</span>
   </div>
-    <ion-grid class="recipe_grid">
-      <ion-row class="recipe_class_wrap" justify-content-center grid-co>
-        <ion-col col-3 *ngFor="let item of recipeList" class="recipe_item" (click)="gotoDetail()">{{item}}</ion-col>
-      </ion-row>
-      <span style="margin-top: -2px; background: #e6e9ee; width: 100%; height: 8px;"></span>
-    </ion-grid>
+  <ul class="recipe_grid clearFix">
+    <li *ngFor="let item of recipeList" (click)="gotoDetail()" style="background:rgba(255,0,0,0.05);;"> {{item}}</li>
+    <span></span>
+  </ul>
 
-    <div class="div1">
-        <img class="pic1" src="../../assets/imgs/icon_nutrition.svg"/>
-        <span class="title">宝宝生病辅食</span>
-      </div>
-        <ion-grid class="recipe_grid">
-          <ion-row class="recipe_class_wrap" justify-content-center grid-co>
-            <ion-col col-3 *ngFor="let item of recipeList" class="recipe_item" style="background:rgba(239,232,255,1);">{{item}}</ion-col>
-          </ion-row>
-          <span style="margin-top: -2px; background: #e6e9ee; width: 100%; height: 8px;"></span>
-        </ion-grid>
+  <div class="div1">
+    <img class="pic1" src="../../assets/imgs/icon_nutrition.svg"/>
+    <span class="title">宝宝生病辅食</span>
+  </div>
+  <ul class="recipe_grid clearFix">
+    <li *ngFor="let item of recipeList" (click)="gotoDetail()" style="background:rgba(239,232,255,1);;"> {{item}}</li>
+    <span></span>
+  </ul>
+  <!-- <ion-grid class="recipe_grid">
+    <ion-row class="recipe_class_wrap" justify-content-center grid-co>
+      <ion-col col-4 *ngFor="let item of recipeList" class="recipe_item" style="background:rgba(239,232,255,1);">{{item}}</ion-col>
+    </ion-row>
+    <span></span>
+  </ion-grid> -->
 
-        <div class="div1">
-            <img class="pic1" src="../../assets/imgs/icon_foodyingyang.svg"/>
-            <span class="title">营养功效</span>
-          </div>
-            <ion-grid class="recipe_grid">
-              <ion-row class="recipe_class_wrap" justify-content-center grid-co>
-                <ion-col col-3 *ngFor="let item of recipeList" class="recipe_item" style="background:rgba(255,252,236,1);">{{item}}</ion-col>
-              </ion-row>
-              <span style="margin-top: -2px; background: #e6e9ee; width: 100%; height: 8px;"></span>
-            </ion-grid>
-
-            <div class="div1">
-                <img class="pic1" src="../../assets/imgs/icon_foodmaterial.svg"/>
-                <span class="title">食材选择</span>
-              </div>
-                <ion-grid class="recipe_grid">
-                  <ion-row class="recipe_class_wrap" justify-content-center grid-co>
-                    <ion-col col-3 *ngFor="let item of recipeList" class="recipe_item" style="background:rgba(240,250,251,1);">{{item}}</ion-col>
-                  </ion-row>
-                  <span style="margin-top: -2px; background: #e6e9ee; width: 100%; height: 8px;"></span>
-                </ion-grid>
+  <div class="div1">
+    <img class="pic1" src="../../assets/imgs/icon_foodyingyang.svg"/>
+    <span class="title">营养功效</span>
+  </div>
+  <!-- <ion-grid class="recipe_grid">
+    <ion-row class="recipe_class_wrap" justify-content-center grid-co>
+      <ion-col col-4 *ngFor="let item of recipeList" class="recipe_item" style="background:rgba(255,252,236,1);">{{item}}</ion-col>
+    </ion-row>
+    <span></span>
+  </ion-grid> -->
+  <ul class="recipe_grid clearFix">
+    <li *ngFor="let item of recipeList" (click)="gotoDetail()" style="background:rgba(255,252,236,1);;"> {{item}}</li>
+    <span></span>
+  </ul>
+  <div class="div1">
+    <img class="pic1" src="../../assets/imgs/icon_foodmaterial.svg"/>
+    <span class="title">食材选择</span>
+  </div>
+  <ul class="recipe_grid clearFix">
+    <li *ngFor="let item of recipeList" (click)="gotoDetail()" style="background:rgba(240,250,251,1);;"> {{item}}</li>
+    <span></span>
+  </ul>
+  <!-- <ion-grid class="recipe_grid">
+    <ion-row class="recipe_class_wrap" justify-content-center grid-co>
+      <ion-col col-4 *ngFor="let item of recipeList" class="recipe_item" style="background:rgba(240,250,251,1);">{{item}}</ion-col>
+    </ion-row>
+    <span></span>
+  </ion-grid> -->
 </ion-content>
