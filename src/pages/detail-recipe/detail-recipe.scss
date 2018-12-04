@@ -1,8 +1,6 @@
 page-detail-recipe {
   .header {
     background-color: #ffffff;
-    padding-left: 16px;
-    padding-right: 16px;
   }
 
   .toolbar .toolbar-background {
@@ -11,7 +9,7 @@ page-detail-recipe {
   }
 
   .header .toolbar-ios {
-    padding: 0px;
+    padding: 0px 16px 0px 16px;
   }
 
   .col {
