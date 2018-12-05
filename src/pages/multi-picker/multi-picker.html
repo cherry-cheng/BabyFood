@@ -1,4 +1,5 @@
-<div class="multi-picker-placeholder" *ngIf="placeholder && !_text">{{placeholder}}111</div>
-<div class="multi-picker-text" *ngIf="!placeholder || _text">{{_text}}222</div>
-<button aria-haspopup="true" type="button" [id]="id" ion-button="item-cover" [attr.aria-labelledby]="_labelId" [attr.aria-disabled]="_disabled"
+<div class="multi-picker-placeholder" *ngIf=false>{{placeholder}}111</div>
+<div class="multi-picker-text" *ngIf=false>{{_text}}222</div>
+<button *ngIf=false aria-haspopup="true" type="button" [id]="id" ion-button="item-cover" [attr.aria-labelledby]="_labelId"
+  [attr.aria-disabled]="_disabled"
   class="item-cover"></button>
