@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { MultiPickerModule } from "ion-multi-picker";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
+    MultiPickerModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
