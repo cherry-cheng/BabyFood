@@ -22,7 +22,7 @@
 
   <ion-toolbar>
     <div class="row responsive-break">
-      <div class="col" style="width: 100%;" (click)="gotoChoose(1)">
+      <div class="col multi-picker-text" style="width: 100%;" (click)="gotoChoose(1)">
         <span>产后
           <img src="../../assets/imgs/icon_filtration.svg" />
         </span>
@@ -53,10 +53,12 @@
 </ion-content>
 
 <ion-footer>
-  <ion-item>
-    <ion-label>Fruit Picker</ion-label>
-    <ion-multi-picker id="fruit" [(ngModel)]="fruit" item-content [multiPickerColumns]="fruits"></ion-multi-picker>
-  </ion-item>
+
+<ion-item>
+  <ion-label>Fruit Picker</ion-label>
+  <ion-multi-picker id="fruit" [(ngModel)]="fruit" item-content [multiPickerColumns]="fruits"></ion-multi-picker>
+</ion-item>
+
 </ion-footer>
 
 

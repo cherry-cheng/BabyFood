@@ -1,3 +1,4 @@
+import { MultiPicker } from './../pages/multi-picker/multi-picker';
 import { DetailRecipePage } from './../pages/detail-recipe/detail-recipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -7,24 +8,24 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { MultiPickerModule } from "ion-multi-picker";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    DetailRecipePage
+    DetailRecipePage,
+    MultiPicker
   ],
   imports: [
     BrowserModule,
-    MultiPickerModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    DetailRecipePage
+    DetailRecipePage,
+    MultiPicker
   ],
   providers: [
     StatusBar,

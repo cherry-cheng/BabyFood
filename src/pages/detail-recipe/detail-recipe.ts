@@ -1,7 +1,7 @@
+import { convertEnumToColumn } from 'ion-multi-picker';
 import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController, ToastController } from 'ionic-angular';
 import { BaseUI } from '../../common/baseui';
-import { convertEnumToColumn } from "ion-multi-picker";
 
 /**
  * Generated class for the DetailRecipePage page.
