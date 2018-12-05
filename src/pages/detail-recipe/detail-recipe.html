@@ -53,19 +53,11 @@
 </ion-content>
 
 <ion-footer>
-  <ion-multi-picker id="fruit" [(ngModel)]="fruit" item-content [multiPickerColumns]="fruits"></ion-multi-picker>
-
 <div class="row responsive-break">
   <div class="col" style="width: 100%;">
-    <span>产后
-      <img src="../../assets/imgs/icon_filtration.svg" />
-    </span>
-<ion-multi-picker id="fruit" [(ngModel)]="fruit" item-content [multiPickerColumns]="fruits" style="height: -20px"></ion-multi-picker>
+<ion-multi-picker id="fruit" [(ngModel)]="fruit" item-content [multiPickerColumns]="fruits" [(ngModel)]="title">{{title}}</ion-multi-picker>
   </div>
   <div class="col" style="width: 100%">
-    <span>按营养功效选择
-      <img src="../../assets/imgs/icon_filtration.svg" />
-    </span>
 <ion-multi-picker id="fruit" [(ngModel)]="fruit" item-content [multiPickerColumns]="fruits"></ion-multi-picker>
   </div>
 </div>

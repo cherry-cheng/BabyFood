@@ -38,6 +38,8 @@ export class MultiPicker implements AfterContentInit, ControlValueAccessor, OnDe
    */
   id: string;
 
+  title:string='uuuuu';
+
   /**
    * @input {string} The text to display on the picker's cancel button. Default: `Cancel`.
    */
