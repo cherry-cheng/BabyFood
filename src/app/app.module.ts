@@ -1,3 +1,4 @@
+import { RecipedetailPage } from './../pages/recipedetail/recipedetail';
 import { MultiPicker } from './../pages/multi-picker/multi-picker';
 import { DetailRecipePage } from './../pages/detail-recipe/detail-recipe';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +15,7 @@ import { HomePage } from '../pages/home/home';
     MyApp,
     HomePage,
     DetailRecipePage,
+    RecipedetailPage,
     MultiPicker
   ],
   imports: [
@@ -25,6 +27,7 @@ import { HomePage } from '../pages/home/home';
     MyApp,
     HomePage,
     DetailRecipePage,
+    RecipedetailPage,
     MultiPicker
   ],
   providers: [

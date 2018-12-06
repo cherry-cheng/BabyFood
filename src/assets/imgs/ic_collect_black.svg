@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_collect_black</title>
+    <desc>Created with Sketch.</desc>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页-辅食详情" transform="translate(-287.000000, -30.000000)">
+            <g id="Group">
+                <g id="Group-3" transform="translate(287.000000, 30.000000)">
+                    <g id="Group">
+                        <g id="ic_collection" transform="translate(3.000000, 4.000000)">
+                            <path d="M12.8850932,0 C11.3757764,0 9.89440994,0.685714286 8.91614907,1.82857143 C7.9378882,0.685714286 6.6242236,0 5.11490683,0 C2.29192547,0 0,2.28571429 0,5.11428571 C0,9.71428571 4.19254658,12.5714286 6.95962733,14.4857143 C7.42546584,14.8095238 8.07763975,15.3142857 8.91614907,16 C9.86645963,15.3142857 10.5745342,14.8095238 11.0403727,14.4857143 C13.8074534,12.5714286 18,9.71428571 18,5.11428571 C17.9720497,2.28571429 15.6801242,0 12.8850932,0 Z" id="Shape" stroke="#000000" fill-rule="nonzero"></path>
+                            <circle id="Oval" fill="#000000" opacity="0" cx="13" cy="5" r="2"></circle>
+                        </g>
+                        <rect id="Rectangle-2" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

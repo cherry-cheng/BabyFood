@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_share_black</title>
+    <desc>Created with Sketch.</desc>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页-辅食详情" transform="translate(-335.000000, -30.000000)">
+            <g id="Group">
+                <g id="Group-4" transform="translate(335.000000, 30.000000)">
+                    <g id="Group">
+                        <g id="ic_share">
+                            <g id="share-2" transform="translate(5.000000, 4.000000)" stroke="#000000">
+                                <circle id="Oval" cx="12.5" cy="2.5" r="2.5"></circle>
+                                <circle id="Oval" cx="12.5" cy="13.5" r="2.5"></circle>
+                                <path d="M4.65833333,9.208 L10.35,12.392" id="Shape"></path>
+                                <path d="M10.3416667,3.608 L4.65833333,6.792" id="Shape"></path>
+                                <circle id="Oval" cx="2.5" cy="7.5" r="2.5"></circle>
+                            </g>
+                            <rect id="Rectangle-5" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
