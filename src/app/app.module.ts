@@ -1,3 +1,4 @@
+import { ActionSheet2Module } from './../components/actionsheet2/actionsheet2.module';
 import { RecipedetailPage } from './../pages/recipedetail/recipedetail';
 import { MultiPicker } from './../pages/multi-picker/multi-picker';
 import { DetailRecipePage } from './../pages/detail-recipe/detail-recipe';
@@ -20,6 +21,7 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
+    ActionSheet2Module,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

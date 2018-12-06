@@ -1,0 +1,18 @@
+<div (click)="cancelbut()" class="contantback" style="display:none;width:100%;height:100%;position:absolute;z-index: 999999;background-color:black ;opacity: 0; background-size: 100% auto;">
+
+</div>
+<div class="contant" style="bottom :-132px">
+  <div class="contantbut">
+
+    <div style="display: flex;width: 90%;margin: 0 auto;" *ngFor="let items of button; let idx=index">
+      <div style="flex: 1;display: inline-block;min-width: 74px;" *ngFor="let item of items.value; let idx=index"
+        (click)="buttonclick(item)">
+        <div *ngIf="item" style="background-color: #fff;width: 50px;border-radius: 8px;margin-top: 10px;display: inline-block;position: relative;height: 50px;">
+          <img style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 30px;" [src]="item.imgurl">
+        </div>
+        <div style="position: relative;font-size: 14px;color: #9d9d9d;height: 24px;line-height: 23px;">{{item.text}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="cancelbut" (click)="cancelbut()">取消</div>
+</div>

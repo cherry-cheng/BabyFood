@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+	"baseUrl": "./", // 基于哪个目录编译ts
+	"declaration": true, // 是否生成声明文件即*.d.ts文件，有了它才有TS的代码提示
+	"experimentalDecorators": true, // 用于支持TS装饰器如angular中的 @NgModule({}) 之类
+	"emitDecoratorMetadata": true, // 用于支持TS装饰器如angular中的 @NgModule({}) 之类
+	"module": "commonjs", // 模块化形式
+	"moduleResolution": "node", // 模块化形式
+	"outDir": "./dist",//输出到哪个文件夹中
+	"rootDir": ".", // 以哪个目录为根
+	"skipDefaultLibCheck": false, // 是否跳过内置库检查
+  "noImplicitAny": true,
+  "target": "es5", // 编译目标版本
+	"suppressImplicitAnyIndexErrors": true, // 几个检查代码的规则
+	"strictNullChecks": true, // 几个检查代码的规则
+  "sourceMap": true, // 是否生成 .js.map
+	"removeComments": true, // 是否移除注释
+	"noFallthroughCasesInSwitch": true // 几个检查代码的规则
+  },
+  "exclude": [ 
+    "node_modules"
+  ]
+}
