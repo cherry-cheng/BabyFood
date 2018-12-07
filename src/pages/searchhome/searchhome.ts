@@ -15,9 +15,10 @@ import { IonicPage, NavController, NavParams, ItemSliding } from 'ionic-angular'
 })
 export class SearchhomePage {
   items: string[] = [];
+  isHomeP: boolean = true;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     //装载测试数据
-    for(let i=0; i<12; i++) {
+    for (let i = 0; i < 12; i++) {
       this.items.push("test" + i);
     }
   }
@@ -50,5 +51,10 @@ export class SearchhomePage {
     if ("Enter" == event.key) {
       //function
     }
+  }
+
+  gotoResult() {
+    //进入搜索界面
+    this.isHomeP = false;
   }
 }
