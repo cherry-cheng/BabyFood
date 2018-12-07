@@ -1,5 +1,5 @@
-import { Injectable, ComponentFactoryResolver, Injector, ApplicationRef ,Component} from '@angular/core';
 import { PopupboxComponent } from './popupbox';
+import { Injectable, ComponentFactoryResolver, Injector, ApplicationRef ,Component} from '@angular/core';
 
 /*
   Generated class for the Actionsheet2controllerProvider provider.
@@ -29,7 +29,7 @@ export class Actionsheet2controllerProvider {
   }
 
   present() {
-    
+
   }
 
 

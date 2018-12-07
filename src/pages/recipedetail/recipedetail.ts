@@ -40,38 +40,31 @@ export class RecipedetailPage {
     this.act2controller.create({
       buttons: [
         {
-          text: "微信",
+          text: "微信好友",
           imgurl: "assets/imgs/weixinzone.png",
           handler: () => {
             console.log("11");
           }
         },
         {
-          text: "微信朋友圈",
+          text: "朋友圈",
           imgurl: "assets/imgs/weixinzone.png",
           handler: () => {
             console.log("22");
           }
         },
         {
-          text: "qq",
+          text: "微博",
           imgurl: "assets/imgs/weixinzone.png",
           handler: () => {
             console.log("33");
           }
         },
         {
-          text: "qq空间",
+          text: "QQ好友",
           imgurl: "assets/imgs/weixinzone.png",
           handler: () => {
             console.log("44");
-          }
-        },
-        {
-          text: "qq空间",
-          imgurl: "assets/imgs/weixinzone.png",
-          handler: () => {
-            console.log("55");
           }
         }
       ]

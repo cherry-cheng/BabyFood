@@ -5,31 +5,30 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-<ion-navbar hideBackButton="true" id="navMy">
-  <div class="navMy-left" (click)="dismiss();">
-    <img src="../../assets/imgs/ic_back_black.svg" />
-  </div>
-  <div class="navMy-center">
-    <span>辅食详情</span>
-  </div>
-  <div class="navMy-right">
-    <ion-row>
-      <ion-col col-50 (click)="collect()">
-<img src="../../assets/imgs/ic_collect_black.svg" />
-      </ion-col>
-      <ion-col col-50 (click)="share()">
-<img src="../../assets/imgs/ic_share_black.svg" />
-      </ion-col>
-    </ion-row>
-  </div>
-</ion-navbar>
+  <ion-navbar hideBackButton="true" id="navMy">
+    <div class="navMy-left" (click)="dismiss();">
+      <img src="../../assets/imgs/ic_back_black.svg" />
+    </div>
+    <div class="navMy-center">
+      <span>辅食详情</span>
+    </div>
+    <div class="navMy-right">
+      <!-- <ion-row> -->
+        <!-- <ion-col col-50 (click)="collect()"> -->
+          <img src="../../assets/imgs/ic_collect_black.svg" style="margin-right:24px;" (click)="collect()"/>
+        <!-- </ion-col> -->
+        <!-- <ion-col col-50 (click)="share()"> -->
+          <img src="../../assets/imgs/ic_share_black.svg" (click)="share()" />
+        <!-- </ion-col> -->
+      <!-- </ion-row> -->
+    </div>
+  </ion-navbar>
 </ion-header>
 
 
 <ion-content>
 
-<iframe class="webPage" name="samplePage" src="http://vweizhan.test.opencodes.top:9001/v1.0.2/getfooddetail?id=30">
-</iframe>
+  <iframe class="webPage" name="samplePage" src="http://vweizhan.test.opencodes.top:9001/v1.0.2/getfooddetail?id=30">
+  </iframe>
 
 </ion-content>

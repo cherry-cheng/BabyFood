@@ -40,12 +40,12 @@ export class MultiPicker implements AfterContentInit, ControlValueAccessor, OnDe
   /**
    * @input {string} The text to display on the picker's cancel button. Default: `Cancel`.
    */
-  @Input() cancelText: string = 'Cancel';
+  @Input() cancelText: string = '取消';
 
   /**
    * @input {string} The text to display on the picker's "Done" button. Default: `Done`.
    */
-  @Input() doneText: string = 'Done';
+  @Input() doneText: string = '确定';
 
   /**
    * @input {string} The text to display on the picker's "Reset" button. Default: `Reset`.
@@ -57,6 +57,7 @@ export class MultiPicker implements AfterContentInit, ControlValueAccessor, OnDe
    */
   @Input() multiPickerColumns: MultiPickerColumn[] = [];
 
+  @Input() titleStr: string = 'cyh';
   /**
    * @input {string} the character to separate values from different columns
    */
