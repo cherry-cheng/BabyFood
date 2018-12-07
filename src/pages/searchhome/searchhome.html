@@ -1,18 +1,12 @@
-<!--
-  Generated template for the SearchhomePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-<ion-navbar hideBackButton="true" id="navMy">
-     <ion-searchbar placeholder="宝宝肉松" (input)="gotoSearch($event)" searchbar-md-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"
-    searchbar-ios-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"></ion-searchbar>
-<button ion-button color="white" class="cancelButt">取消</button>
-  </ion-navbar>
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content>
+  <ion-item class="search-box">
+    <ion-searchbar class="searchbar" (ionInput)="getItems($event)">
+    </ion-searchbar>
+    <button class="back-btn" (click)="goBack()" end>取消</button>
+  </ion-item>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -14,16 +14,43 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'searchhome.html',
 })
 export class SearchhomePage {
-
+  searchQuery: string = '';
+  items: string[];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.initializeItems();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SearchhomePage');
+    console.log('ionViewDidLoad SearchPage');
   }
 
-  gotoSearch(ev: any) {
+  initializeItems() {
+    this.items = [
+      'Amsterdam',
+      'Bogota',
+      'nurdun',
+      'andysh'
+    ];
+  }
 
+  getItems(event: any) {
+    //Reset items back to all of the items
+    this.initializeItems();
+
+    //set val to the value of the searchbar
+    let val = event.target.value;
+
+    //if the value is an empty string dont`t filter the items
+    if (val && val.trim() != '') {
+      this.items = this.items.filter((item) => {
+        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+  }
+
+  //返回到主页面
+  goBack() {
+    this.navCtrl.pop()
   }
 
 }

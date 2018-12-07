@@ -1,5 +1,40 @@
 page-home {
 
+  ion-header {
+
+    .input-bar {
+      position: relative;
+
+      height: 40px;
+      width: 90%;
+      left: 5%;
+      background:rgba(0, 0, 0, 0.04);
+      border-radius:4px;
+      padding: 5px;
+      padding-left: 3px;
+      line-height: 40px;
+
+      img {
+        vertical-align:middle;
+                position: relative;
+                top: -3px;
+      }
+
+      span {
+        vertical-align:middle;
+        font-size: 14px;
+        font-family: PingFang-SC-Medium;
+        font-weight: 500;
+        color: rgba(74, 74, 74, 1);
+        position: relative;
+        top: -3px;
+        left: 8px;
+      }
+    }
+  }
+
+
+
   #navMy {
     display: block;
     background-size: 100% 48px;
@@ -52,8 +87,8 @@ page-home {
     width: auto;
     height: 100%;
     display: inline-block;
-    background:rgba(0, 0, 0, 0.04);
-    border-radius:4px;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
     line-height: 40px;
     vertical-align: middle;
   }
