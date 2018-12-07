@@ -1,3 +1,4 @@
+import { TestPage } from './../test/test';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ItemSliding } from 'ionic-angular';
 
@@ -56,5 +57,6 @@ export class SearchhomePage {
   gotoResult() {
     //进入搜索界面
     this.isHomeP = false;
+    this.navCtrl.push(TestPage);
   }
 }
