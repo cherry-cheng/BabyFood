@@ -1,33 +1,49 @@
 page-searchhome {
-  .search-box {
+  .header {
     display: flex;
-    align-items: flex-start;
-    width: 100%;
-    height: 70px;
-    line-height: 100px;
-    //background:rgba(0, 0, 0, 0.2)
+
+    .toolbar .searchbar-input {
+      background: rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+    }
+
+    .search_btn {
+      font-size: 17px;
+      font-family: PingFang-SC-Medium;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 1);
+      width: 40px;
+      display: flex;
+      align-items: center;
+    }
+
   }
 
-  .searchbar-md {
-    background: rgba(0, 0, 0, 0.2);
+  .toolbar-background {
+    border-width: 0 0 0 !important;
+    background-color: transparent !important;
   }
 
-  .searchbar-input-container {
-    width: 75%;
-    background: rgba(0, 0, 0, 0.0);
+  .searchHistory {
+    padding: 10px;
   }
 
-  .back-btn {
-    position: absolute;
-    top: 20px;
-    right: 0;
-    width: 100px;
-    background: rgba(0, 0, 0, 0.0);
-    font-size: 16px;
-    color: #488aff;
+  .searchHistory h4 {
+    margin-bottom: 10px;
   }
 
-  input {
-    color: #cccccc;
+  .searchHistory span {
+    background-color: #eee;
+    display: inline-block;
+    padding: 0 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 5px;
+    font-size: 13px;
+    line-height: 25px;
+    max-width: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #232323;
   }
 }

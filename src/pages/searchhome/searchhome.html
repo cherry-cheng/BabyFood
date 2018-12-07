@@ -1,12 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <div class="header">
+<ion-searchbar [(ngModel)]="keyWrods" (ionInput)="onInput($event)" [placeholder]="'宝宝肉松'" searchbar-md-input-search-icon-svg="../../assets/imgs/ic_search_black.svg" searchbar-ios-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"></ion-searchbar>
+      <span class="search_btn" (click)="goBack()">取消</span>
+    </div>
+  </ion-navbar>
+</ion-header>
 <ion-content>
-  <ion-item class="search-box">
-    <ion-searchbar class="searchbar" (ionInput)="getItems($event)">
-    </ion-searchbar>
-    <button class="back-btn" (click)="goBack()" end>取消</button>
-  </ion-item>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      {{ item }}
-    </ion-item>
-  </ion-list>
+<div class="searchHistory">
+  <h4>搜索历史
+    <img src="../../assets/imgs/icon_searchstory_del.svg" alt="">
+  </h4>
+  <span>萨</span>
+  <span>萨达所大</span>
+  <span>萨达所所多</span>
+  <span>所多</span>
+  <span>萨达所大所大所大所大所多萨达所大所大所大所大所多</span>
+</div>
+<div class="searchHistory">
+  <h4>搜索热词</h4>
+  <span>萨</span>
+  <span>萨达所大</span>
+  <span>萨达所所多</span>
+  <span>所多</span>
+  <span>萨达所大所大所大所大所多萨达所大所大所大所大所多</span>
+</div>
 </ion-content>
