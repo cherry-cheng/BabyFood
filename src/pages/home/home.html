@@ -1,13 +1,24 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-searchbar placeholder="宝宝肉松" (input)="gotoSearch($event)" searchbar-md-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"
+  <!-- <ion-navbar hideBackButton="true" id="navMy">
+     <ion-searchbar placeholder="宝宝肉松" (input)="gotoSearch($event)" searchbar-md-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"
     searchbar-ios-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"></ion-searchbar>
-  </ion-toolbar>
+    <div class="titleDiv">
+      <span>
+        <img src="../../assets/imgs/ic_search_black.svg" alt="">
+        宝宝肉松</span>
+    </div>
+  </ion-navbar> -->
+  <ion-navbar hideBackButton="true" id="navMy">
+    <div class="navMy-left" (click)="gotoSearch();">
+      <img src="../../assets/imgs/ic_search_black.svg" />
+      <span>宝宝肉松</span>
+    </div>
+  </ion-navbar>
 </ion-header>
 
 <ion-content>
   <div class="div1">
-    <img class="pic1" src="../../assets/imgs/icon_recipes.svg"/>
+    <img class="pic1" src="../../assets/imgs/icon_recipes.svg" />
     <span class="title">月龄食谱</span>
   </div>
   <ul class="recipe_grid clearFix">
@@ -16,46 +27,27 @@
   </ul>
 
   <div class="div1">
-    <img class="pic1" src="../../assets/imgs/icon_nutrition.svg"/>
+    <img class="pic1" src="../../assets/imgs/icon_nutrition.svg" />
     <span class="title">宝宝生病辅食</span>
   </div>
   <ul class="recipe_grid clearFix">
     <li *ngFor="let item of recipeList" (click)="gotoDetail()" style="background:rgba(239,232,255,1);;"> {{item}}</li>
     <span></span>
   </ul>
-  <!-- <ion-grid class="recipe_grid">
-    <ion-row class="recipe_class_wrap" justify-content-center grid-co>
-      <ion-col col-4 *ngFor="let item of recipeList" class="recipe_item" style="background:rgba(239,232,255,1);">{{item}}</ion-col>
-    </ion-row>
-    <span></span>
-  </ion-grid> -->
-
   <div class="div1">
-    <img class="pic1" src="../../assets/imgs/icon_foodyingyang.svg"/>
+    <img class="pic1" src="../../assets/imgs/icon_foodyingyang.svg" />
     <span class="title">营养功效</span>
   </div>
-  <!-- <ion-grid class="recipe_grid">
-    <ion-row class="recipe_class_wrap" justify-content-center grid-co>
-      <ion-col col-4 *ngFor="let item of recipeList" class="recipe_item" style="background:rgba(255,252,236,1);">{{item}}</ion-col>
-    </ion-row>
-    <span></span>
-  </ion-grid> -->
   <ul class="recipe_grid clearFix">
     <li *ngFor="let item of recipeList" (click)="gotoDetail()" style="background:rgba(255,252,236,1);;"> {{item}}</li>
     <span></span>
   </ul>
   <div class="div1">
-    <img class="pic1" src="../../assets/imgs/icon_foodmaterial.svg"/>
+    <img class="pic1" src="../../assets/imgs/icon_foodmaterial.svg" />
     <span class="title">食材选择</span>
   </div>
   <ul class="recipe_grid clearFix">
     <li *ngFor="let item of recipeList" (click)="gotoDetail()" style="background:rgba(240,250,251,1);;"> {{item}}</li>
     <span></span>
   </ul>
-  <!-- <ion-grid class="recipe_grid">
-    <ion-row class="recipe_class_wrap" justify-content-center grid-co>
-      <ion-col col-4 *ngFor="let item of recipeList" class="recipe_item" style="background:rgba(240,250,251,1);">{{item}}</ion-col>
-    </ion-row>
-    <span></span>
-  </ion-grid> -->
 </ion-content>
