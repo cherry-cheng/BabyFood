@@ -1,0 +1,44 @@
+page-searchhome {
+    .toolbar-background {
+      border-width: 0 0 0 !important;
+      background-color: transparent !important;
+    }
+
+    .searchbar-ios .searchbar-input,
+    .searchbar-md .searchbar-input {
+      height: 40px;
+      font-size: 14px;
+    }
+
+    .searchbar-ios.searchbar-left-aligned .searchbar-input,
+    .searchbar-md.searchbar-left-aligned .searchbar-input {
+      padding-left: 40px;
+      background: rgba(0, 0, 0, 0.04);
+
+    }
+
+    .header-md::after {
+      height: 0;
+    }
+
+    .searchbar-md .searchbar-input {
+      -webkit-box-shadow-: none;
+      box-shadow: none;
+
+    }
+
+    .searchbar-ios .searchbar-search-icon,
+    .searchbar-md .searchbar-search-icon {
+      width: 24px;
+      height: 24px;
+      background-size: 17px;
+      background-position: center center;
+    }
+
+    .cancelButt {
+      font-size:17px;
+      font-family:PingFang-SC-Medium;
+      font-weight:500;
+      color:rgba(0, 0, 0, 1);
+    }
+}

@@ -9,7 +9,7 @@ declare var document:any;
  */
 @Component({
   selector: "popupbox",
-  template: 
+  template:
   `<div (click)="cancelbut()" class="contantback" style="display:none;width:100%;height:100%;position:absolute;z-index: 999999;background-color:black ;opacity: 0; background-size: 100% auto;">
   </div>
   <div class="contant" style="bottom :-182px">

@@ -1,3 +1,4 @@
+import { SearchhomePage } from './../pages/searchhome/searchhome';
 import { ActionSheet2Module } from './../components/actionsheet2/actionsheet2.module';
 import { RecipedetailPage } from './../pages/recipedetail/recipedetail';
 import { MultiPicker } from './../pages/multi-picker/multi-picker';
@@ -17,6 +18,7 @@ import { HomePage } from '../pages/home/home';
     HomePage,
     DetailRecipePage,
     RecipedetailPage,
+    SearchhomePage,
     MultiPicker
   ],
   imports: [
@@ -30,6 +32,7 @@ import { HomePage } from '../pages/home/home';
     HomePage,
     DetailRecipePage,
     RecipedetailPage,
+    SearchhomePage,
     MultiPicker
   ],
   providers: [
