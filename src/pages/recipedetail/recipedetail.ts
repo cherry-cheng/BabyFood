@@ -41,28 +41,28 @@ export class RecipedetailPage {
       buttons: [
         {
           text: "微信好友",
-          imgurl: "assets/imgs/weixinzone.png",
+          imgurl: "assets/imgs/icon_share_wechat.svg",
           handler: () => {
             console.log("11");
           }
         },
         {
           text: "朋友圈",
-          imgurl: "assets/imgs/weixinzone.png",
+          imgurl: "assets/imgs/icon_share_moments.svg",
           handler: () => {
             console.log("22");
           }
         },
         {
           text: "微博",
-          imgurl: "assets/imgs/weixinzone.png",
+          imgurl: "assets/imgs/icon_share_weibo.svg",
           handler: () => {
             console.log("33");
           }
         },
         {
           text: "QQ好友",
-          imgurl: "assets/imgs/weixinzone.png",
+          imgurl: "assets/imgs/icon_share_qq.svg",
           handler: () => {
             console.log("44");
           }

@@ -3,7 +3,42 @@ page-test {
   $animation-duration: 0.4s;
 
   .top_segment {
-    color: #66CCFF;
+    background-color: #fff;
+
+    .segment-button {
+      border: none;
+      color: #000;
+      border-radius: 0;
+      height: 44px;
+      line-height: 44px;
+      font-weight: bold;
+      font-size: 15px;
+      background-color: #fff;
+    }
+
+    .segment-button.segment-activated {
+      background-color: #fff;
+      color: #FF5B8D;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 18px;
+        height: 4px;
+        background: rgba(255, 91, 141, 1);
+        border-radius: 2px;
+        position: absolute;
+        left: 50%;
+        margin-left: -9px;
+        border-radius: 2px;
+        bottom: 3px;
+      }
+    }
+
+  }
+
+  ion-content {
+    background-color: #F8F8F8 !important;
   }
 
   ion-list {
@@ -11,6 +46,174 @@ page-test {
       background-color: transparent;
       padding-left: 0;
       position: relative;
+    }
+    .itemNav{
+      display: flex;
+      padding: 14px 0 12px;
+      background-color: #fff;
+      div{
+        flex: 1;
+        height: 21px;
+        line-height: 21px;
+        font-size: 15px;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+          display: inline-block;
+          margin-left: 8px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    .searchNone {
+      text-align: center;
+      height: 100%;
+      font-size: 15px;
+      color: #4A4A4A;
+
+      div {
+        padding-top: 75px;
+        margin-bottom: 7px;
+      }
+
+    }
+
+    .resultList {
+      padding: 0 16px;
+      background-color: #fff;
+      margin-bottom: 8px;
+
+      .title {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 40px;
+        text-align: left;
+        color: #000000
+      }
+
+      ul li {
+        padding: 10px 0;
+        display: flex;
+
+        .left {
+          float: left;
+          width: 130px;
+          height: 74px;
+          overflow: hidden;
+          margin-right: 8px;
+          border-radius: 4px;
+          background-color: #fff;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .right {
+          float: left;
+          flex: 1;
+
+          h5 {
+            font-size: 17px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 7px;
+            margin-top: 0;
+            text-align: left;
+            line-height: 24px;
+          }
+
+          p {
+            color: #9B9B9B;
+            font-size: 11px;
+            text-align: left;
+
+            span {
+              display: inline-block;
+              height: 20px;
+              padding: 0 6px;
+              line-height: 20px;
+              background-color: #F7F7F7;
+              margin-bottom: 9px;
+            }
+          }
+        }
+      }
+
+      .more {
+        line-height: 44px;
+        height: 44px;
+        font-size: 15px;
+        color: #9F9F9F;
+        text-align: center;
+
+        span {
+          display: inline-block;
+          margin-left: 4px;
+        }
+      }
+    }
+
+    .babyList {
+      ul li {
+        .left {
+          width: 120px;
+        }
+
+        .right {
+
+          h5 {
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 21px;
+            height: 42px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 16px;
+          }
+        }
+
+      }
+    }
+
+    .canEat {
+      ul li {
+        .left {
+          width: 93px;
+          height: 69px;
+        }
+
+        .right {
+          position: relative;
+          h5 {
+            font-size: 15px;
+            margin-bottom: 0;
+            line-height: 21px;
+          }
+
+          .pink {
+            color: #FF5B8D;
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+
+          .detail {
+            background-color: #F7F7F7;
+            font-size: 14px;
+            height: 31px;
+            padding: 0 12px;
+            line-height: 31px;
+            position: absolute;
+            right: 16px;
+            top: 17px;
+
+          }
+        }
+      }
     }
 
     ion-label {

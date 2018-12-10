@@ -43,6 +43,9 @@ export class TestPage {
   data_group: Array<{ id: number, title: string, details: any, icon: string, showDetails: boolean }> = [];
 
   select(index) {
+    if (index === 3) {
+      this.top_segment = 'top_3';
+    }
     if (index === 2) {
       this.top_segment = 'top_2';
     }
@@ -72,6 +75,9 @@ export class TestPage {
 
   panEvent(e) {
     let currentIndex = this.slider.getActiveIndex();
+    if (currentIndex === 3) {
+      this.top_segment = 'top_3';
+    }
     if (currentIndex === 2) {
       this.top_segment = 'top_2';
     }

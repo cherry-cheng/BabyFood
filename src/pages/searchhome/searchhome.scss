@@ -1,6 +1,7 @@
 page-searchhome {
   .header {
     display: flex;
+    justify-content: space-between;
 
     .toolbar .searchbar-input {
       background: rgba(0, 0, 0, 0.04);
@@ -12,9 +13,11 @@ page-searchhome {
       font-family: PingFang-SC-Medium;
       font-weight: 500;
       color: rgba(0, 0, 0, 1);
-      width: 40px;
-      display: flex;
-      align-items: center;
+      line-height: 40px;
+      height: 40px;
+      ;
+      display: inline-block;
+      padding-left: 16px;
     }
 
   }
@@ -24,32 +27,51 @@ page-searchhome {
     background-color: transparent !important;
   }
 
+  .searchbar-ios {
+    padding: 0;
+  }
+
   .searchHistory {
-    padding: 10px;
+    padding: 0px 16px;
+    margin-top: 8px;
   }
 
   .searchHistory h4 {
     margin-bottom: 10px;
-  }
-
-  .searchHistory h4 img {
-    float: right;
-    height: 100%;
-    margin-right: 20px;
+    margin-top: 0;
+    line-height: 40px;
+    height: 40px;
+    font-size: 17px;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
   }
 
   .searchHistory span {
-    background-color: #eee;
+    background-color: #F8F8F8;
     display: inline-block;
-    padding: 0 2.5%;
-    margin-right: 2.5%;
+    padding: 0 8px;
+    margin-right: 16px;
     margin-bottom: 5px;
     font-size: 13px;
-    line-height: 25px;
-    max-width: 40%;
+    line-height: 32px;
+    // max-width: 40%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #232323;
+    color: #4A4A4A;
+  }
+
+  .searchbar-ios .searchbar-search-icon,
+  .searchbar-md .searchbar-search-icon {
+    width: 18px;
+    height: 18px;
+    background-size: 17px;
+    background-position: center center;
+  }
+  .searchbar-ios.searchbar-left-aligned .searchbar-input,
+  .searchbar-md.searchbar-left-aligned .searchbar-input{
+    padding-left: 38px;
   }
 }
