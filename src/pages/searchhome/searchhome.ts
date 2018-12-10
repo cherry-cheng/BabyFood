@@ -57,6 +57,6 @@ export class SearchhomePage {
   gotoResult() {
     //进入搜索界面
     this.isHomeP = false;
-    this.navCtrl.push(TestPage);
+    // this.navCtrl.push(TestPage);
   }
 }

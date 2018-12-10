@@ -2,13 +2,8 @@
   <ion-navbar style="padding:8px 16px;border-bottom: 1px solid #CDCED3">
     <div class="header">
       <form action="javascript:return true;" style="flex:1">
-        <ion-searchbar
-          type="search" 
-          (keyup)='showResult($event,keyWrods)' 
-          [ngModelOptions]="{standalone: true}"
-          [(ngModel)]="keyWrods" 
-          [placeholder]="'宝宝肉松'" 
-          searchbar-md-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"
+        <ion-searchbar type="search" (keyup)='showResult($event,keyWrods)' [ngModelOptions]="{standalone: true}"
+          [(ngModel)]="keyWrods" [placeholder]="'宝宝肉松'" searchbar-md-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"
           searchbar-ios-input-search-icon-svg="../../assets/imgs/ic_search_black.svg">
         </ion-searchbar>
       </form>
@@ -20,7 +15,7 @@
   <div id="div_home" *ngIf='isHomeP'>
     <div class="searchHistory">
       <h4>
-          <p>搜索历史</p>
+        <p>搜索历史</p>
         <img src="../../assets/imgs/icon_searchstory_del.svg" alt="">
       </h4>
       <span *ngFor="let item of items" (click)="gotoResult()">{{item}}</span>
@@ -35,6 +30,126 @@
     </div>
   </div>
   <div id="divResult" *ngIf='!isHomeP'>
-    ddsfdsagsdf
+    <div class="searchNone" *ngIf="false">
+      <div>
+        <img src="../../assets/imgs/search_babydata_placeholder.svg" alt="">
+      </div>
+      <p>竟然一个结果都没有</p>
+    </div>
+    <div class="resultList recipeList">
+      <div class="title">食谱</div>
+      <ul>
+        <li class="clearFix">
+          <div class="left">
+            <img src="../../assets/imgs/img_lists_placeholder.svg" alt="">
+          </div>
+          <div class="right">
+            <h5>西葫芦韭菜盒子</h5>
+            <p>
+              <span>#补铁</span>
+              <span>#6-7个月</span>
+              <span>#早餐</span>
+            </p>
+            <p>1239人已收藏</p>
+          </div>
+        </li>
+        <li class="clearFix">
+          <div class="left">
+            <img src="../../assets/imgs/img_lists_placeholder.svg" alt="">
+          </div>
+          <div class="right">
+            <h5>西葫芦韭菜盒子</h5>
+            <p>
+              <span>#补铁</span>
+              <span>#6-7个月</span>
+              <span>#早餐</span>
+            </p>
+            <p>1239人已收藏</p>
+          </div>
+        </li>
+      </ul>
+      <div class="more">
+        更多食谱(26条)
+        <span>></span>
+      </div>
+    </div>
+    <div class="resultList babyList">
+      <div class="title">育儿知识</div>
+      <ul>
+        <li class="clearFix">
+          <div class="left">
+            <img src="../../assets/imgs/img_pareknow_placeholder.svg" alt="">
+          </div>
+          <div class="right">
+            <h5>新生儿睡中带笑 在做什么美梦</h5>
+            <p>2910人已阅读</p>
+          </div>
+        </li>
+        <li class="clearFix">
+          <div class="left">
+            <img src="../../assets/imgs/img_pareknow_placeholder.svg" alt="">
+          </div>
+          <div class="right">
+            <h5>注意啦！这种学步工具早被拉入黑名单了</h5>
+            <p>2910人已阅读</p>
+          </div>
+        </li>
+        <li class="clearFix">
+          <div class="left">
+            <img src="../../assets/imgs/img_pareknow_placeholder.svg" alt="">
+          </div>
+          <div class="right">
+            <h5>佩带耳模矫正器最佳治疗时间段是？新生儿可以佩带耳模矫正…</h5>
+            <p>2910人已阅读</p>
+          </div>
+        </li>
+      </ul>
+      <div class="more">
+        更多知识(26条)
+        <span>></span>
+      </div>
+    </div>
+    <div class="resultList canEat">
+      <div class="title">能不能吃</div>
+      <ul>
+        <li class="clearFix">
+          <div class="left">
+            <img src="../../assets/imgs/img_eat_placeholder.svg" alt="">
+          </div>
+          <div class="right">
+            <h5>三黄鸡</h5>
+            <p class="pink">宝宝7个月以上能吃</p>
+            <p><span>4个菜谱</span></p>
+            <div class="detail">详情</div>
+          </div>
+        </li>
+        <li class="clearFix">
+          <div class="left">
+            <img src="../../assets/imgs/img_eat_placeholder.svg" alt="">
+          </div>
+          <div class="right">
+            <h5>麻辣鸡肉串</h5>
+            <p class="pink">宝宝7个月以上能吃</p>
+            <p><span>4个菜谱</span></p>
+            <div class="detail">详情</div>
+          </div>
+        </li>
+        <li class="clearFix">
+          <div class="left">
+            <img src="../../assets/imgs/img_eat_placeholder.svg" alt="">
+          </div>
+          <div class="right">
+            <h5>鸡脆骨</h5>
+            <p class="pink">宝宝7个月以上能吃</p>
+            <p><span>4个菜谱</span></p>
+            <div class="detail">详情</div>
+          </div>
+        </li>
+      </ul>
+      <div class="more">
+        更多食材(32条)
+        <span>></span>
+      </div>
+    </div>
   </div>
 </ion-content>

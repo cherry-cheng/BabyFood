@@ -49,12 +49,8 @@ enum Nutrition {
 })
 export class DetailRecipePage extends BaseUI {
   title: string;
-  titleLabel1: string = "3333";
-  titleLabel2: string = "4444";
   recipeList: string[] = [];
-
   testList: string[] = [];
-
   monthRange: string[] = [
     "孕期",
     "产后",
@@ -122,15 +118,6 @@ export class DetailRecipePage extends BaseUI {
 
   dismiss() {
     this.viewCtrl.dismiss();
-  }
-
-  gotoChoose(id: any) {
-    if (id == 1) {
-      super.showToast(this.toastCtrl, "id等于1");
-    }
-    if (id == 2) {
-      super.showToast(this.toastCtrl, "id等于2");
-    }
   }
 
   showDetail() {
