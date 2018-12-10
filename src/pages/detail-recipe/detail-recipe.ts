@@ -29,6 +29,8 @@ enum Fruit {
 })
 export class DetailRecipePage extends BaseUI {
   title: string;
+  titleLabel1: string="3333";
+  titleLabel2: string="4444";
   recipeList: string[] = [];
 
   testList: string[] = [];

@@ -6,10 +6,10 @@
 // Material Design Multi Picker
 // --------------------------------------------------
 
-$multi-picker-md-padding-top:         $item-md-padding-top !default;
-$multi-picker-md-padding-right:       ($item-md-padding-right / 2) !default;
-$multi-picker-md-padding-bottom:      $item-md-padding-bottom !default;
-$multi-picker-md-padding-left:        $item-md-padding-left !default;
+$multi-picker-md-padding-top: $item-md-padding-top !default;
+$multi-picker-md-padding-right: ($item-md-padding-right / 2) !default;
+$multi-picker-md-padding-bottom: $item-md-padding-bottom !default;
+$multi-picker-md-padding-left: $item-md-padding-left !default;
 
 
 .md ion-multi-picker {
@@ -22,7 +22,9 @@ $multi-picker-md-padding-left:        $item-md-padding-left !default;
 
 // Generate Material Design Label colors
 // --------------------------------------------------
-@each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
+@each $color-name,
+$color-base,
+$color-contrast in get-colors($colors-md) {
   .item-multi-picker .label-md-#{$color-name} {
     color: $color-base;
   }
