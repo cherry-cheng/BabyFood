@@ -14,10 +14,12 @@
   <ion-toolbar>
     <div class="row responsive-break">
       <div class="col multi-picker-text" style="width: 100%;" (click)="gotoChoose(1)">
-        <ion-multi-picker [(ngModel)]="babymonth" item-content [multiPickerColumns]="babymonths" titleStr="产后"></ion-multi-picker>
+        <ion-multi-picker [(ngModel)]="babymonth" item-content [multiPickerColumns]="babymonths" titleStr="产后"
+          (ngModelChange)="onModel1Change($event)"></ion-multi-picker>
       </div>
       <div class="col" style="width: 100%" (click)="gotoChoose(2)">
-        <ion-multi-picker [(ngModel)]="nutrition" item-content [multiPickerColumns]="nutritions" titleStr="按营养功效选择"></ion-multi-picker>
+        <ion-multi-picker [(ngModel)]="nutrition" item-content [multiPickerColumns]="nutritions" titleStr="按营养功效选择"
+          (ngModelChange)="onModel2Change($event)"></ion-multi-picker>
       </div>
     </div>
   </ion-toolbar>

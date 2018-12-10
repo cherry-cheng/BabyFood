@@ -49,8 +49,8 @@ enum Nutrition {
 })
 export class DetailRecipePage extends BaseUI {
   title: string;
-  titleLabel1: string="3333";
-  titleLabel2: string="4444";
+  titleLabel1: string = "3333";
+  titleLabel2: string = "4444";
   recipeList: string[] = [];
 
   testList: string[] = [];
@@ -134,6 +134,14 @@ export class DetailRecipePage extends BaseUI {
   }
 
   showDetail() {
-    this.navCtrl.push(RecipedetailPage, { "title": '食谱' });
+    this.navCtrl.push(RecipedetailPage, { title: "食谱" });
+  }
+
+  onModel1Change(event: any) {
+    console.log(event);
+  }
+
+  onModel2Change(event: any) {
+    console.log(event);
   }
 }
