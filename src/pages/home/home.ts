@@ -60,9 +60,9 @@ export class HomePage {
         console.log(err);
       }
       if (res) {
-        this.keywords = res;
-        if (this.keywords.status == 200) {
-          this.keyword = this.keywords.body[0];
+        this.keywords = res.body;
+        if (res.status == 200) {
+          this.keyword = this.keywords[0];
           console.log(this.keyword);
         } else {
           return;
@@ -72,7 +72,7 @@ export class HomePage {
   }
 
   gotoSearch(ev: any) {
-    let modal = this.modalCtrl.create(SearchhomePage, {"keyword": ev});
+    let modal = this.modalCtrl.create(SearchhomePage, { "keywords": this.keywords});
     //关闭modal页面后的回调
     modal.onDidDismiss(() => {
 

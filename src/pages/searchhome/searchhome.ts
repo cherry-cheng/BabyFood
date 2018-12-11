@@ -17,18 +17,21 @@ import { IonicPage, NavController, NavParams, ItemSliding } from 'ionic-angular'
 export class SearchhomePage {
   items: string[] = [];
   isHomeP: boolean = true;
+  keywords: any;
   keyword: string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    //装载测试数据
-    for (let i = 0; i < 12; i++) {
-      this.items.push("test" + i);
-    }
   }
 
   ionViewDidLoad() {
-    this.keyword = this.navParams.get("keyword");
-    console.log(this.keyword);
+    this.keywords = this.navParams.get("keywords");
+    this.keyword = this.keywords[0];
 
+    let length = this.keywords.length;
+    console.log(length);
+    for (let i = 0; i < length; i++) {
+      this.items.push(this.keywords[i]);
+    }
+    console.log(this.keywords);
   }
 
   //返回到主页面
@@ -61,5 +64,9 @@ export class SearchhomePage {
     //进入搜索界面
     this.isHomeP = false;
     // this.navCtrl.push(TestPage);
+  }
+
+  deleteAll() {
+
   }
 }
