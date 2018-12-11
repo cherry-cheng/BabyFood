@@ -20,6 +20,9 @@
 </ion-header>
 
 <ion-content>
-  <iframe class="webPage" name="samplePage" src="http://vweizhan.test.opencodes.top:9001/v1.0.2/getfooddetail?id=30">
+  <!-- <iframe class="webPage" name="samplePage" src={{urlWebPage}}>
+  </iframe> -->
+
+  <iframe #iframe id="iframe" class="webPage" [src]="secUrl">
   </iframe>
 </ion-content>

@@ -10,15 +10,15 @@ import { isObject } from "rxjs/util/isObject";
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
+
+export const baseUrl = "http://192.168.1.155:9001/v1.0.2/";
 @Injectable()
 export class RestProvider {
   constructor(public http: HttpClient) {
     console.log("Hello RestProvider Provider");
   }
-
-  private baseUrl = "http://192.168.1.155:9001/v1.0.2/";
-  private urlFoodCategory = this.baseUrl + "getfoodcategory";
-  private urlFoodList = this.baseUrl + "getfoodlist";
+  private urlFoodCategory = baseUrl + "getfoodcategory";
+  private urlFoodList = baseUrl + "getfoodlist";
 
   private httpOptions = {
     headers: new HttpHeaders({
@@ -66,7 +66,7 @@ export class RestProvider {
     params: any,
     callback?: (res: any, error: any) => void
   ): void {
-    let absoluteUrl = this.baseUrl + url;
+    let absoluteUrl = baseUrl + url;
     this.http
       .get(absoluteUrl, { params: this.encodeComplexHttpParams(params) })
       .subscribe(
@@ -84,7 +84,7 @@ export class RestProvider {
     params: any,
     callback?: (res: any, error: any) => void
   ): void {
-    let URL = this.baseUrl + url;
+    let URL = baseUrl + url;
     this.http.post(URL, this.encodeComplexHttpParams(params)).subscribe(
       res => {
         callback && callback(res, null);

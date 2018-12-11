@@ -122,8 +122,8 @@ export class DetailRecipePage extends BaseUI {
     this.viewCtrl.dismiss();
   }
 
-  showDetail() {
-    this.navCtrl.push(RecipedetailPage, { title: "食谱" });
+  showDetail(id:any) {
+    this.navCtrl.push(RecipedetailPage, { foodid: id });
   }
 
   onModel1Change(event: any) {
