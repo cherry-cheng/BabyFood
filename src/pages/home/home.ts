@@ -55,8 +55,8 @@ export class HomePage {
     modal.present();
   }
 
-  gotoDetail() {
-    this.navCtrl.push(DetailRecipePage, { title: "食谱" });
+  gotoDetail(id: any) {
+    this.navCtrl.push(DetailRecipePage, { title: id });
   }
 
   getFoodCategory() {

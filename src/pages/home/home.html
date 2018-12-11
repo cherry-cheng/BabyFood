@@ -1,19 +1,4 @@
 <ion-header>
-  <!-- <ion-navbar hideBackButton="true" id="navMy">
-     <ion-searchbar placeholder="宝宝肉松" (input)="gotoSearch($event)" searchbar-md-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"
-    searchbar-ios-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"></ion-searchbar>
-    <div class="titleDiv">
-      <span>
-        <img src="../../assets/imgs/ic_search_black.svg" alt="">
-        宝宝肉松</span>
-    </div>
-  </ion-navbar> -->
-  <!-- <ion-navbar hideBackButton="true" id="navMy">
-    <div class="navMy-left" (click)="gotoSearch();">
-      <img src="../../assets/imgs/ic_search_black.svg" />
-      <span>宝宝肉松</span>
-    </div>
-  </ion-navbar> -->
   <ion-navbar style="padding:5px 16px 0;">
     <div class="input-bar" (click)="gotoSearch()">
       <span>
@@ -29,7 +14,7 @@
     <span class="title">{{listCate1.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-    <li *ngFor="let item of listCate1.samllcategory" (click)="gotoDetail()" style="background:rgba(255,0,0,0.05);">
+    <li *ngFor="let item of listCate1.samllcategory, let id = 'item.id'" (click)="gotoDetail(id)" style="background:rgba(255,0,0,0.05);">
       {{item.category_name}}</li>
     <span></span>
   </ul>
@@ -39,7 +24,7 @@
     <span class="title">{{listCate2.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-    <li *ngFor="let item of listCate2.samllcategory" (click)="gotoDetail()" style="background:rgba(239,232,255,1);">
+    <li *ngFor="let item of listCate2.samllcategory, let id = 'item.id'" (click)="gotoDetail(id)" style="background:rgba(239,232,255,1);">
       {{item.category_name}}</li>
     <span></span>
   </ul>
@@ -48,7 +33,7 @@
     <span class="title">{{listCate3.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-    <li *ngFor="let item of listCate3.samllcategory" (click)="gotoDetail()" style="background:rgba(255,252,236,1);">
+    <li *ngFor="let item of listCate3.samllcategory, let id = 'item.id'" (click)="gotoDetail(id)" style="background:rgba(255,252,236,1);">
       {{item.category_name}}</li>
     <span></span>
   </ul>
@@ -57,8 +42,8 @@
     <span class="title">{{listCate4.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-<li *ngFor="let item of listCate4.samllcategory" (click)="gotoDetail()" style="background:rgba(240,250,251,1);">
-{{item.category_name}}</li>
+    <li *ngFor="let item of listCate4.samllcategory, let id = 'item.id'" (click)="gotoDetail(id)" style="background:rgba(240,250,251,1);">
+      {{item.category_name}}</li>
     <span></span>
   </ul>
 </ion-content>

@@ -48,36 +48,9 @@ enum Nutrition {
   templateUrl: "detail-recipe.html"
 })
 export class DetailRecipePage extends BaseUI {
-  title: string;
+  id: string;
   recipeList: string[] = [];
   testList: string[] = [];
-  monthRange: string[] = [
-    "孕期",
-    "产后",
-    "6-7个月",
-    "8-9个月",
-    "10-12个月",
-    "1-2岁",
-    "2-3岁",
-    "3岁以上"
-  ];
-
-  nutritionRange: string[] = [
-    "预防便秘",
-    "腹泻",
-    "感冒",
-    "缺铁性贫血",
-    "发烧",
-    "咳嗽",
-    "补铁",
-    "补锌",
-    "补钙",
-    "补DHA",
-    "补维生素叶酸",
-    "免疫力",
-    "促长牙",
-    "促食欲"
-  ];
 
   recipiItem: string = "#6-7";
 
@@ -113,7 +86,7 @@ export class DetailRecipePage extends BaseUI {
   }
 
   ionViewDidLoad() {
-    this.title = this.navParams.get("title");
+    this.id = this.navParams.get("title");
   }
 
   dismiss() {

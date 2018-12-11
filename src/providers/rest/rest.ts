@@ -17,20 +17,37 @@ export class RestProvider {
 
   private baseUrl = "http://192.168.1.155:9001/v1.0.2/";
   private urlFoodCategory = this.baseUrl + "getfoodcategory";
+  private urlFoodList = this.baseUrl + "getfoodlist";
 
   private httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded',
-    }),
-  }
+      "Content-Type": "application/x-www-form-urlencoded"
+    })
+  };
 
   getFoodCategory() {
     return new Promise(resolve => {
-      this.http.get(this.urlFoodCategory).subscribe(data => {
-        resolve(data);
-      }, err => {
-        console.log(err);
-      });
+      this.http.get(this.urlFoodCategory).subscribe(
+        data => {
+          resolve(data);
+        },
+        err => {
+          console.log(err);
+        }
+      );
+    });
+  }
+
+  getFoodList(foodId) {
+    return new Promise(resolve => {
+      this.http.get(this.urlFoodList, { id: foodId }).subscribe(
+        data => {
+          resolve(data);
+        },
+        err => {
+          console.log(err);
+        }
+      );
     });
   }
 
