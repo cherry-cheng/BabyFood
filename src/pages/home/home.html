@@ -26,35 +26,39 @@
 <ion-content>
   <div class="div1">
     <img class="pic1" src="../../assets/imgs/icon_recipes.svg" />
-    <span class="title">月龄食谱</span>
+    <span class="title">{{listCate1.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-    <li *ngFor="let item of recipeList" (click)="gotoDetail()" style="background:rgba(255,0,0,0.05);;"> {{item}}</li>
+    <li *ngFor="let item of listCate1.samllcategory" (click)="gotoDetail()" style="background:rgba(255,0,0,0.05);">
+      {{item.category_name}}</li>
     <span></span>
   </ul>
 
   <div class="div1">
     <img class="pic1" src="../../assets/imgs/icon_nutrition.svg" />
-    <span class="title">宝宝生病辅食</span>
+    <span class="title">{{listCate2.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-    <li *ngFor="let item of recipeList" (click)="gotoDetail()" style="background:rgba(239,232,255,1);;"> {{item}}</li>
+    <li *ngFor="let item of listCate2.samllcategory" (click)="gotoDetail()" style="background:rgba(239,232,255,1);">
+      {{item.category_name}}</li>
     <span></span>
   </ul>
   <div class="div1">
     <img class="pic1" src="../../assets/imgs/icon_foodyingyang.svg" />
-    <span class="title">营养功效</span>
+    <span class="title">{{listCate3.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-    <li *ngFor="let item of recipeList" (click)="gotoDetail()" style="background:rgba(255,252,236,1);;"> {{item}}</li>
+    <li *ngFor="let item of listCate3.samllcategory" (click)="gotoDetail()" style="background:rgba(255,252,236,1);">
+      {{item.category_name}}</li>
     <span></span>
   </ul>
   <div class="div1">
     <img class="pic1" src="../../assets/imgs/icon_foodmaterial.svg" />
-    <span class="title">食材选择</span>
+    <span class="title">{{listCate4.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-    <li *ngFor="let item of recipeList" (click)="gotoDetail()" style="background:rgba(240,250,251,1);;"> {{item}}</li>
+<li *ngFor="let item of listCate4.samllcategory" (click)="gotoDetail()" style="background:rgba(240,250,251,1);">
+{{item.category_name}}</li>
     <span></span>
   </ul>
 </ion-content>

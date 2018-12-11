@@ -15,6 +15,23 @@ export class HomePage {
 
   foodcate: any;
 
+  listCate1: any = {
+    bigcategory: "",
+    samllcategory:[]
+  };
+  listCate2: any = {
+    bigcategory: "",
+    samllcategory: []
+  };
+  listCate3: any = {
+    bigcategory: "",
+    samllcategory: []
+  };
+  listCate4: any = {
+    bigcategory: "",
+    samllcategory: []
+  };
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -46,6 +63,17 @@ export class HomePage {
     this.restProvider.getFoodCategory().then(data => {
       this.foodcate = data;
       console.log(this.foodcate);
+
+      this.listCate1 = this.foodcate.body[0];
+      this.listCate2 = this.foodcate.body[1];
+      this.listCate3 = this.foodcate.body[2];
+      this.listCate4 = this.foodcate.body[3];
+      console.log(this.listCate1);
+      console.log(this.listCate1.bigcategory);
+      console.log(this.listCate1.samllcategory);
+      console.log(this.listCate2);
+      console.log(this.listCate3);
+      console.log(this.listCate4);
     });
   }
 }
