@@ -2,8 +2,7 @@
   <ion-navbar style="padding:5px 16px 0;">
     <div class="input-bar" (click)="gotoSearch()">
       <span>
-        <img src="../../assets/imgs/ic_search_black.svg" />
-        宝宝肉松</span>
+        <img src="../../assets/imgs/ic_search_black.svg" />{{keyword}}</span>
     </div>
   </ion-navbar>
 </ion-header>
@@ -14,7 +13,7 @@
     <span class="title">{{listCate1.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-<li *ngFor="let item of listCate1.samllcategory" (click)="gotoDetail(item.id, item.category_name)" style="background:rgba(255,0,0,0.05);">
+    <li *ngFor="let item of listCate1.samllcategory" (click)="gotoDetail(item.id, item.category_name)" style="background:rgba(255,0,0,0.05);">
       {{item.category_name}}</li>
     <span></span>
   </ul>
@@ -33,7 +32,7 @@
     <span class="title">{{listCate3.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-<li *ngFor="let item of listCate3.samllcategory" (click)="gotoDetail(item.id, item.category_name)" style="background:rgba(255,252,236,1);">
+    <li *ngFor="let item of listCate3.samllcategory" (click)="gotoDetail(item.id, item.category_name)" style="background:rgba(255,252,236,1);">
       {{item.category_name}}</li>
     <span></span>
   </ul>
@@ -42,7 +41,7 @@
     <span class="title">{{listCate4.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-<li *ngFor="let item of listCate4.samllcategory" (click)="gotoDetail(item.id, item.category_name)" style="background:rgba(240,250,251,1);">
+    <li *ngFor="let item of listCate4.samllcategory" (click)="gotoDetail(item.id, item.category_name)" style="background:rgba(240,250,251,1);">
       {{item.category_name}}</li>
     <span></span>
   </ul>

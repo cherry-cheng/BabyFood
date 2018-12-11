@@ -20,6 +20,9 @@ export class HomePage {
 
   foodcate: any;
 
+  keyword: string;
+  keywords: any;
+
   listCate1: any = {
     bigcategory: "",
     samllcategory: []
@@ -51,6 +54,17 @@ export class HomePage {
 
   ionViewDidLoad() {
     this.getFoodCategory();
+    var params = {type: "1"};
+    this.restProvider.GET("getsearchkeywords", params, (res, err) => {
+      if (err) {
+        console.log(err);
+      }
+      if (res) {
+        this.keywords = res;
+        this.keyword = this.keywords.body[0]
+        console.log(this.keyword);
+      }
+    });
   }
 
   gotoSearch(ev: any) {
