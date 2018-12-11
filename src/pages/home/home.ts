@@ -54,23 +54,29 @@ export class HomePage {
 
   ionViewDidLoad() {
     this.getFoodCategory();
-    var params = {type: "1"};
+    var params = { type: "1" };
     this.restProvider.GET("getsearchkeywords", params, (res, err) => {
       if (err) {
         console.log(err);
       }
       if (res) {
         this.keywords = res;
-        this.keyword = this.keywords.body[0]
-        console.log(this.keyword);
+        if (this.keywords.status == 200) {
+          this.keyword = this.keywords.body[0];
+          console.log(this.keyword);
+        } else {
+          return;
+        }
       }
     });
   }
 
   gotoSearch(ev: any) {
-    let modal = this.modalCtrl.create(SearchhomePage);
+    let modal = this.modalCtrl.create(SearchhomePage, {"keyword": ev});
     //关闭modal页面后的回调
-    modal.onDidDismiss(() => {});
+    modal.onDidDismiss(() => {
+
+    });
     modal.present();
   }
 
@@ -81,18 +87,20 @@ export class HomePage {
   getFoodCategory() {
     this.restProvider.getFoodCategory().then(data => {
       this.foodcate = data;
-      console.log(this.foodcate);
-
-      this.listCate1 = this.foodcate.body[0];
-      this.listCate2 = this.foodcate.body[1];
-      this.listCate3 = this.foodcate.body[2];
-      this.listCate4 = this.foodcate.body[3];
-      console.log(this.listCate1);
-      console.log(this.listCate1.bigcategory);
-      console.log(this.listCate1.samllcategory);
-      console.log(this.listCate2);
-      console.log(this.listCate3);
-      console.log(this.listCate4);
+      if (this.foodcate.status == 200) {
+        this.listCate1 = this.foodcate.body[0];
+        this.listCate2 = this.foodcate.body[1];
+        this.listCate3 = this.foodcate.body[2];
+        this.listCate4 = this.foodcate.body[3];
+        console.log(this.listCate1);
+        console.log(this.listCate1.bigcategory);
+        console.log(this.listCate1.samllcategory);
+        console.log(this.listCate2);
+        console.log(this.listCate3);
+        console.log(this.listCate4);
+      } else {
+        return;
+      }
     });
   }
 }

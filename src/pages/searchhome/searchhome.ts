@@ -17,6 +17,7 @@ import { IonicPage, NavController, NavParams, ItemSliding } from 'ionic-angular'
 export class SearchhomePage {
   items: string[] = [];
   isHomeP: boolean = true;
+  keyword: string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     //装载测试数据
     for (let i = 0; i < 12; i++) {
@@ -25,7 +26,9 @@ export class SearchhomePage {
   }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad SearchPage");
+    this.keyword = this.navParams.get("keyword");
+    console.log(this.keyword);
+
   }
 
   //返回到主页面
