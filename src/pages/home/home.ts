@@ -1,8 +1,13 @@
-import { SearchhomePage } from './../searchhome/searchhome';
-import { DetailRecipePage } from './../detail-recipe/detail-recipe';
-import { Component } from '@angular/core';
-import { NavController, NavParams, Events, ModalController } from 'ionic-angular';
-import { RestProvider } from '../../providers/rest/rest';
+import { SearchhomePage } from "./../searchhome/searchhome";
+import { DetailRecipePage } from "./../detail-recipe/detail-recipe";
+import { Component } from "@angular/core";
+import {
+  NavController,
+  NavParams,
+  Events,
+  ModalController
+} from "ionic-angular";
+import { RestProvider } from "../../providers/rest/rest";
 
 @Component({
   selector: "page-home",
@@ -17,7 +22,7 @@ export class HomePage {
 
   listCate1: any = {
     bigcategory: "",
-    samllcategory:[]
+    samllcategory: []
   };
   listCate2: any = {
     bigcategory: "",
@@ -55,8 +60,8 @@ export class HomePage {
     modal.present();
   }
 
-  gotoDetail(id: any) {
-    this.navCtrl.push(DetailRecipePage, { title: id });
+  gotoDetail(id: any, title: string) {
+    this.navCtrl.push(DetailRecipePage, { title: id, titleName: title });
   }
 
   getFoodCategory() {

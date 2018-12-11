@@ -53,12 +53,12 @@ export class DetailRecipePage extends BaseUI {
   recipeList: string[] = [];
   testList: string[] = [];
   recipiItem: string = "#6-7";
-
+  titleName : string;
   foodResponse: any;
   foodList: any = {
-    data:[],
-    count:1,
-    currentpage:1
+    data: [],
+    count: 1,
+    currentpage: 1
   };
 
   babymonths: any[];
@@ -95,18 +95,28 @@ export class DetailRecipePage extends BaseUI {
 
   ionViewDidLoad() {
     this.foodid = this.navParams.get("title");
+    this.titleName = this.navParams.get("titleName");
     console.log(this.foodid);
-    var params = 'id=' + this.foodid;
-    this.getFoodList(params);
-  }
-
-  getFoodList(params: string) {
-    this.httpRest.getFoodList(params).then(data => {
-      this.foodResponse = data;
-      this.foodList = this.foodResponse.body;
-      console.log(this.foodList);
+    var params = { id: this.foodid };
+    this.httpRest.GET("getfoodlist", params, (res, err) => {
+      if (err) {
+        console.log(err);
+      }
+      if (res) {
+        this.foodResponse = res;
+        this.foodList = this.foodResponse.body;
+        console.log(this.foodList);
+      }
     });
   }
+
+  // getFoodList(params: string) {
+  //   this.httpRest.getFoodList(params).then(data => {
+  //     this.foodResponse = data;
+  //     this.foodList = this.foodResponse.body;
+  //     console.log(this.foodList);
+  //   });
+  // }
 
   dismiss() {
     this.viewCtrl.dismiss();

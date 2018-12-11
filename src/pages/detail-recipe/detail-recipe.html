@@ -4,37 +4,24 @@
       <img src="../../assets/imgs/ic_back_black.svg" />
     </div>
     <div class="navMy-center">
-      <span>{{title}}</span>
+      <span>{{titleName}}</span>
     </div>
     <div class="navMy-right">
       <span></span>
     </div>
   </ion-navbar>
-  <!-- <ion-toolbar>
-    <div class="row responsive-break">
-      <div class="col multi-picker-text" style="width: 100%;" (click)="gotoChoose(1)">
-        <ion-multi-picker [(ngModel)]="babymonth" item-content [multiPickerColumns]="babymonths" titleStr="产后"
-          (ngModelChange)="onModel1Change($event)"></ion-multi-picker>
-      </div>
-      <div class="col" style="width: 100%" (click)="gotoChoose(2)">
-        <ion-multi-picker [(ngModel)]="nutrition" item-content [multiPickerColumns]="nutritions" titleStr="按营养功效选择"
-          (ngModelChange)="onModel2Change($event)"></ion-multi-picker>
-      </div>
-    </div>
-  </ion-toolbar> -->
 </ion-header>
-
 
 <ion-content>
   <ion-list style="background-color: white">
-    <ion-item ion-item *ngFor="let item1 of testList" (click)="showDetail()">
-      <img item-left src="../../assets/imgs/img_lists_placeholder.svg">
+    <ion-item ion-item *ngFor="let item1 of foodList.data" (click)="showDetail()">
+<img item-left src="{{item1.imgurl}}">
       <div class="item_right_div">
-        <p>西湖路韭菜盒子</p>
+        <p>{{item1.title}}</p>
         <ul class="ulItem clearFix">
-          <li *ngFor="let item of recipeList" style="background:rgba(247,247,247,1);"> {{item}}</li>
+          <li *ngFor="let item of item1.label" style="background:rgba(247,247,247,1);"> {{item.name}}</li>
         </ul>
-        <span>1239人已收藏</span>
+        <span>{{item1.loves}}人已收藏</span>
       </div>
     </ion-item>
   </ion-list>

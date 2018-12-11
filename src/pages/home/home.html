@@ -14,7 +14,7 @@
     <span class="title">{{listCate1.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-    <li *ngFor="let item of listCate1.samllcategory" (click)="gotoDetail(item.id)" style="background:rgba(255,0,0,0.05);">
+<li *ngFor="let item of listCate1.samllcategory" (click)="gotoDetail(item.id, item.category_name)" style="background:rgba(255,0,0,0.05);">
       {{item.category_name}}</li>
     <span></span>
   </ul>
@@ -24,7 +24,7 @@
     <span class="title">{{listCate2.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-    <li *ngFor="let item of listCate2.samllcategory" (click)="gotoDetail(item.id)" style="background:rgba(239,232,255,1);">
+    <li *ngFor="let item of listCate2.samllcategory" (click)="gotoDetail(item.id, item.category_name)" style="background:rgba(239,232,255,1);">
       {{item.category_name}}</li>
     <span></span>
   </ul>
@@ -33,7 +33,7 @@
     <span class="title">{{listCate3.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-    <li *ngFor="let item of listCate3.samllcategory" (click)="gotoDetail(item.id)" style="background:rgba(255,252,236,1);">
+<li *ngFor="let item of listCate3.samllcategory" (click)="gotoDetail(item.id, item.category_name)" style="background:rgba(255,252,236,1);">
       {{item.category_name}}</li>
     <span></span>
   </ul>
@@ -42,7 +42,7 @@
     <span class="title">{{listCate4.bigcategory}}</span>
   </div>
   <ul class="recipe_grid clearFix">
-    <li *ngFor="let item of listCate4.samllcategory" (click)="gotoDetail(item.id)" style="background:rgba(240,250,251,1);">
+<li *ngFor="let item of listCate4.samllcategory" (click)="gotoDetail(item.id, item.category_name)" style="background:rgba(240,250,251,1);">
       {{item.category_name}}</li>
     <span></span>
   </ul>
