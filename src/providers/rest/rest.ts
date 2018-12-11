@@ -1,7 +1,8 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/catch";
+import { isObject } from "rxjs/util/isObject";
 
 /*
   Generated class for the RestProvider provider.
@@ -38,9 +39,11 @@ export class RestProvider {
     });
   }
 
-  getFoodList(foodId) {
+  getFoodList(params: string) {
+    let absoluteURL = this.urlFoodList + "?" + params;
+    console.log(absoluteURL);
     return new Promise(resolve => {
-      this.http.get(this.urlFoodList, { id: foodId }).subscribe(
+      this.http.get(absoluteURL).subscribe(
         data => {
           resolve(data);
         },
@@ -51,52 +54,89 @@ export class RestProvider {
     });
   }
 
-  // /**
-  //  *全局获取HTTP请求的方法
-  //  *
-  //  * @private
-  //  * @param {string} url
-  //  * @returns {Observable<string[]>}
-  //  * @memberof RestProvider
-  //  */
-  // private getUrlReturn(url: string): Observable<string[]> {
-  //   return this.http
-  //     .get(url)
-  //     .map(this.extractData)
-  //     .catch(this.handleError);
-  // }
+  /**
+   *封装的get和post方法，备用
+   *
+   * @param {*} params
+   * @param {(res: any, error: any) => void} [callback]
+   * @memberof RestProvider
+   */
+  GET(
+    url: string,
+    params: any,
+    callback?: (res: any, error: any) => void
+  ): void {
+    let absoluteUrl = this.baseUrl + url;
+    this.http
+      .get(absoluteUrl, { params: this.encodeComplexHttpParams(params) })
+      .subscribe(
+        res => {
+          callback && callback(res, null);
+        },
+        error => {
+          callback && callback(null, error);
+        }
+      );
+  }
 
-  // /**
-  //  *处理接口返回的数据，处理成 json 格式
-  //  *
-  //  * @private
-  //  * @param {Response} res
-  //  * @returns
-  //  * @memberof RestProvider
-  //  */
-  // private extractData(res: Response) {
-  //   let body = res.json();
-  //   return JSON.parse(body) || {};
-  // }
+  POST(
+    url: string,
+    params: any,
+    callback?: (res: any, error: any) => void
+  ): void {
+    let URL = this.baseUrl + url;
+    this.http.post(URL, this.encodeComplexHttpParams(params)).subscribe(
+      res => {
+        callback && callback(res, null);
+      },
+      error => {
+        callback && callback(null, error);
+      }
+    );
+  }
 
-  // /**
-  //  *处理请求中的错误，考虑了各种情况的错误处理并在 console 中显示
-  //  *
-  //  * @private
-  //  * @param {(Response | any)} error
-  //  * @returns
-  //  * @memberof RestProvider
-  //  */
-  // private handleError(error: Response | any) {
-  //   let errMsg: string;
-  //   if (error instanceof Response) {
-  //     const body = error.json() || "";
-  //     const err = body.error || JSON.stringify(body);
-  //     errMsg = `${error.status} - ${error.statusText || ""} ${err}`;
-  //   } else {
-  //     errMsg = error.message ? error.message : error.toString();
-  //   }
-  //   console.error(errMsg);
-  //   return Observable.throw(errMsg);
-  // }
+  // 将复杂的参数组装成字符串
+  private paramsString(params: any): string {
+    if (!params) return null;
+
+    let str = "";
+
+    for (let key in params) {
+      if (params.hasOwnProperty(key)) {
+        let value = params[key];
+        if (value === null) continue;
+
+        if (Array.isArray(value)) {
+          if (value.length === 0) continue;
+
+          for (let index = 0; index < value.length; index++) {
+            let k = key + "[" + index + "]";
+            let v = value[index];
+            if (str.length > 1) str += "&";
+            str += k + "=" + v;
+          }
+        } else if (isObject(value)) {
+          for (let subKey in value) {
+            if (value.hasOwnProperty(subKey)) {
+              let v = value[subKey];
+              if (v === null) continue;
+
+              let k = key + "[" + subKey + "]";
+              if (str.length > 1) str += "&";
+              str += k + "=" + v;
+            }
+          }
+        } else {
+          if (str.length > 1) str += "&";
+          str += key + "=" + value;
+        }
+      }
+    }
+    return str;
+  }
+
+  private encodeComplexHttpParams(params: any): any {
+    if (!params) return null;
+    return new HttpParams({ fromString: this.paramsString(params) });
+  }
 }

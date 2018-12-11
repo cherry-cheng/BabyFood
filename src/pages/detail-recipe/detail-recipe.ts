@@ -1,4 +1,5 @@
-import { RecipedetailPage } from './../recipedetail/recipedetail';
+import { RestProvider } from "./../../providers/rest/rest";
+import { RecipedetailPage } from "./../recipedetail/recipedetail";
 import { convertEnumToColumn } from "ion-multi-picker";
 import { Component } from "@angular/core";
 import {
@@ -48,11 +49,17 @@ enum Nutrition {
   templateUrl: "detail-recipe.html"
 })
 export class DetailRecipePage extends BaseUI {
-  id: string;
+  foodid: string;
   recipeList: string[] = [];
   testList: string[] = [];
-
   recipiItem: string = "#6-7";
+
+  foodResponse: any;
+  foodList: any = {
+    data:[],
+    count:1,
+    currentpage:1
+  };
 
   babymonths: any[];
   babymonth: BabyMonth;
@@ -66,6 +73,7 @@ export class DetailRecipePage extends BaseUI {
     public navCtrl: NavController,
     public navParams: NavParams,
     public viewCtrl: ViewController,
+    public httpRest: RestProvider,
     public toastCtrl: ToastController
   ) {
     super();
@@ -86,7 +94,18 @@ export class DetailRecipePage extends BaseUI {
   }
 
   ionViewDidLoad() {
-    this.id = this.navParams.get("title");
+    this.foodid = this.navParams.get("title");
+    console.log(this.foodid);
+    var params = 'id=' + this.foodid;
+    this.getFoodList(params);
+  }
+
+  getFoodList(params: string) {
+    this.httpRest.getFoodList(params).then(data => {
+      this.foodResponse = data;
+      this.foodList = this.foodResponse.body;
+      console.log(this.foodList);
+    });
   }
 
   dismiss() {
