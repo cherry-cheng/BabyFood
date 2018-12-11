@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RestProvider } from '../providers/rest/rest';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { RestProvider } from '../providers/rest/rest';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ActionSheet2Module,
     IonicModule.forRoot(MyApp)
   ],
@@ -42,7 +44,7 @@ import { RestProvider } from '../providers/rest/rest';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     RestProvider
   ]
 })
