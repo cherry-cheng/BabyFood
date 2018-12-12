@@ -18,7 +18,7 @@
         <p>搜索历史</p>
         <img src="../../assets/imgs/icon_searchstory_del.svg" alt="" (click)="deleteAll()">
       </h4>
-      <span *ngFor="let item of searchdata" (click)="gotoResult(item)">{{item.searchvalue}}</span>
+      <span *ngFor="let item of searchdata" (click)="gotoResult(item.searchvalue)">{{item.searchvalue}}</span>
     </div>
     <div class="searchHistory">
       <h4>搜索热词</h4>
