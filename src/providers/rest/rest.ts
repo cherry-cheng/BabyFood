@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/catch";
 import { isObject } from "rxjs/util/isObject";
+import { Md5 } from 'ts-md5/dist/md5';
 
 /*
   Generated class for the RestProvider provider.
@@ -11,7 +12,7 @@ import { isObject } from "rxjs/util/isObject";
   and Angular DI.
 */
 
-export const baseUrl = "http://192.168.1.155:9001/v1.0.2/";
+export const baseUrl = "http://vweizhan.test.opencodes.top:9001/v1.0.2/";
 @Injectable()
 export class RestProvider {
   constructor(public http: HttpClient) {
@@ -20,15 +21,19 @@ export class RestProvider {
   private urlFoodCategory = baseUrl + "getfoodcategory";
   private urlFoodList = baseUrl + "getfoodlist";
 
-  private httpOptions = {
-    headers: new HttpHeaders({
-      "Content-Type": "application/x-www-form-urlencoded"
-    })
-  };
+  getauthsign() {
+    let timestamp : string = new Date().getTime() + "";
+    timestamp = timestamp.substring(0,10);
+    timestamp = Md5.hashStr(timestamp + 'bbfs') + "";
+    timestamp = Md5.hashStr(timestamp) + "";
+    return timestamp;
+  }
 
   getFoodCategory() {
+    let headers = new HttpHeaders();
+    headers = headers.append("authsign", "" + this.getauthsign());
     return new Promise(resolve => {
-      this.http.get(this.urlFoodCategory).subscribe(
+      this.http.get(this.urlFoodCategory, {headers: headers}).subscribe(
         data => {
           resolve(data);
         },
