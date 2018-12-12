@@ -26,50 +26,34 @@
     </div>
   </div>
   <div id="divResult" *ngIf='!isHomeP'>
-    <div class="searchNone" *ngIf="false">
+    <div class="searchNone" *ngIf="!isHasResult">
       <div>
         <img src="../../assets/imgs/search_babydata_placeholder.svg" alt="">
       </div>
       <p>竟然一个结果都没有</p>
     </div>
-    <div class="resultList recipeList">
+    <div class="resultList recipeList" *ngIf="isHasResult">
       <div class="title">食谱</div>
       <ul>
-        <li class="clearFix">
+        <li class="clearFix" *ngFor="let item of searchResultdata">
           <div class="left">
-            <img src="../../assets/imgs/img_lists_placeholder.svg" alt="">
+            <img src="{{item.imgurl}}" alt="">
           </div>
           <div class="right">
-            <h5>西葫芦韭菜盒子</h5>
+            <h5>{{item.title}}</h5>
             <p>
-              <span>#补铁</span>
-              <span>#6-7个月</span>
-              <span>#早餐</span>
+              <span *ngFor="let lab of item.label">{{lab.name}}</span>
             </p>
-            <p>1239人已收藏</p>
-          </div>
-        </li>
-        <li class="clearFix">
-          <div class="left">
-            <img src="../../assets/imgs/img_lists_placeholder.svg" alt="">
-          </div>
-          <div class="right">
-            <h5>西葫芦韭菜盒子</h5>
-            <p>
-              <span>#补铁</span>
-              <span>#6-7个月</span>
-              <span>#早餐</span>
-            </p>
-            <p>1239人已收藏</p>
+            <p>{{item.loves}}人已收藏</p>
           </div>
         </li>
       </ul>
-      <div class="more">
+      <div class="more" *ngIf='false'>
         更多食谱(26条)
         <span>></span>
       </div>
     </div>
-    <div class="resultList babyList">
+    <div class="resultList babyList" *ngIf="false">
       <div class="title">育儿知识</div>
       <ul>
         <li class="clearFix">
@@ -105,7 +89,7 @@
         <span>></span>
       </div>
     </div>
-    <div class="resultList canEat">
+    <div class="resultList canEat" *ngIf="false">
       <div class="title">能不能吃</div>
       <ul>
         <li class="clearFix">
