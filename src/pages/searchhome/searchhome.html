@@ -35,7 +35,7 @@
     <div class="resultList recipeList" *ngIf="isHasResult">
       <div class="title">食谱</div>
       <ul>
-        <li class="clearFix" *ngFor="let item of searchResultdata">
+        <li class="clearFix" *ngFor="let item of searchResultdata" (click)="showDetail(item.id)">
           <div class="left">
             <img src="{{item.imgurl}}" alt="">
           </div>

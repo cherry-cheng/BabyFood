@@ -1,11 +1,17 @@
-import { SearchhistoryProvider } from './../../providers/searchhistory/searchhistory';
-import { TestPage } from './../test/test';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ItemSliding } from 'ionic-angular';
+import { RecipedetailPage } from './../recipedetail/recipedetail';
+import { SearchhistoryProvider } from "./../../providers/searchhistory/searchhistory";
+import { TestPage } from "./../test/test";
+import { Component } from "@angular/core";
+import {
+  IonicPage,
+  NavController,
+  NavParams,
+  ItemSliding
+} from "ionic-angular";
 import { Storage } from "@ionic/storage";
 import { NativeStorage } from "@ionic-native/native-storage";
-import { RestProvider } from '../../providers/rest/rest';
-import { e } from '@angular/core/src/render3';
+import { RestProvider } from "../../providers/rest/rest";
+import { e } from "@angular/core/src/render3";
 
 /**
  * Generated class for the SearchhomePage page.
@@ -27,17 +33,16 @@ export class SearchhomePage {
   keywords: any;
   keyword: string;
   searchdata: { searchvalue: string }[] = [];
-  inputWord:string;
+  inputWord: string;
 
   searchResultdata: {
-    imgurl: string,
-    title: string,
-    loves: any,
-    label: any,
-    hits: any,
-    type: any
-   }[] = []
-
+    imgurl: string;
+    title: string;
+    loves: any;
+    label: any;
+    hits: any;
+    type: any;
+  }[] = [];
 
   constructor(
     public navCtrl: NavController,
@@ -85,7 +90,7 @@ export class SearchhomePage {
   showResult(event: any, keyword: string) {
     if ("Enter" == event.key) {
       //function
-      if(keyword == null || keyword.trim().length == 0) {
+      if (keyword == null || keyword.trim().length == 0) {
         console.log(this.keyword);
         this.gotoResult(this.keyword);
       } else {
@@ -103,7 +108,7 @@ export class SearchhomePage {
     this.getSearchHist();
 
     //调用接口搜索
-    var params = { type: "0", keywords: searchItem};
+    var params = { type: "0", keywords: searchItem };
     this.restProvider.GET("bbsearch", params, (res, err) => {
       if (err) {
         console.log(err);
@@ -131,5 +136,9 @@ export class SearchhomePage {
   deleteAll() {
     this.searchProvider.deleteAllSearchHis();
     this.getSearchHist();
+  }
+
+  showDetail(id: any) {
+    this.navCtrl.push(RecipedetailPage, { foodid: id });
   }
 }
