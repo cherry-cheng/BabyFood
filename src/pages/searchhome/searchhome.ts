@@ -24,6 +24,7 @@ export class SearchhomePage {
   keywords: any;
   keyword: string;
   searchdata: { searchvalue: string }[] = [];
+  inputWord:string;
   constructor(
     public navCtrl: NavController,
     public storage: Storage,
@@ -40,6 +41,7 @@ export class SearchhomePage {
     for (let i = 0; i < length; i++) {
       this.items.push(this.keywords[i]);
     }
+
     this.getSearchHist();
   }
 
@@ -68,13 +70,22 @@ export class SearchhomePage {
   showResult(event: any, keyword: string) {
     if ("Enter" == event.key) {
       //function
+      if(keyword == null || keyword.trim().length == 0) {
+        console.log(this.keyword);
+        this.gotoResult(this.keyword);
+      } else {
+        this.gotoResult(keyword);
+      }
     }
   }
 
-  gotoResult() {
+  gotoResult(searchItem: string) {
     //进入搜索界面
     this.isHomeP = false;
-    // this.navCtrl.push(TestPage);
+    this.searchProvider
+      .addSearchHis(searchItem)
+      .then(data => console.log(data), error => console.log(error));
+    this.getSearchHist();
   }
 
   /**
@@ -84,14 +95,6 @@ export class SearchhomePage {
    */
   deleteAll() {
     this.searchProvider.deleteAllSearchHis();
-    this.getSearchHist();
-  }
-
-  hotwordSearch(hotItem:string) {
-    this.searchProvider.addSearchHis(hotItem).then(
-      data=>console.log(data),
-      error=>console.log(error)
-    );
     this.getSearchHist();
   }
 }
