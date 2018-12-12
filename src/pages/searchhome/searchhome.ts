@@ -40,8 +40,15 @@ export class SearchhomePage {
     for (let i = 0; i < length; i++) {
       this.items.push(this.keywords[i]);
     }
+    this.getSearchHist();
+  }
 
-    this.hotwordSearch("111");
+  //返回到主页面
+  goBack() {
+    this.navCtrl.pop();
+  }
+
+  getSearchHist() {
     // 获取本地搜索记录
     this.searchdata = this.searchProvider.getSearchHis();
     if (this.searchdata != null && this.searchdata.length > 0) {
@@ -50,27 +57,6 @@ export class SearchhomePage {
       this.isSearchHist = false;
     }
   }
-
-  showSearchData():any{
-    this.nativeStorage.getItem('searchHis')
-    .then(
-      data => {this.searchdata = data},
-      error => console.log(error)
-    );
-  }
-
-  //返回到主页面
-  goBack() {
-    this.navCtrl.pop();
-  }
-
-  /**
-   *监听input输入框的变化
-   *
-   * @param {*} ev
-   * @memberof SearchhomePage
-   */
-  onInput(ev: any) {}
 
   /**
    *监听键盘按钮点击搜索时
@@ -91,13 +77,21 @@ export class SearchhomePage {
     // this.navCtrl.push(TestPage);
   }
 
-  deleteAll() {}
+  /**
+   *删除所有本地记录
+   *
+   * @memberof SearchhomePage
+   */
+  deleteAll() {
+    this.searchProvider.deleteAllSearchHis();
+    this.getSearchHist();
+  }
 
   hotwordSearch(hotItem:string) {
     this.searchProvider.addSearchHis(hotItem).then(
       data=>console.log(data),
       error=>console.log(error)
     );
-    this.searchdata = this.searchProvider.getSearchHis();
+    this.getSearchHist();
   }
 }

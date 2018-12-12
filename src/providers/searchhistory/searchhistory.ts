@@ -38,6 +38,12 @@ export class SearchhistoryProvider {
     return this.data;
   }
 
+  public deleteAllSearchHis() {
+    let length = this.data.length;
+    this.data.splice(0,length);
+    this.nativeStorage.clear();
+  }
+
   public addSearchHis(value:string):Promise<any> {
     let temp: { searchvalue: string } [] = [];
     let isExsite: boolean = false;
