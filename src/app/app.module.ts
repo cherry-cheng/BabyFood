@@ -1,3 +1,4 @@
+import { NativeStorage } from '@ionic-native/native-storage';
 import { TestPage } from './../pages/test/test';
 import { SearchhomePage } from './../pages/searchhome/searchhome';
 import { ActionSheet2Module } from './../components/actionsheet2/actionsheet2.module';
@@ -14,6 +15,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RestProvider } from '../providers/rest/rest';
 import { HttpClientModule } from "@angular/common/http";
+import { IonicStorageModule } from "@ionic/storage";
+
+import { SearchhistoryProvider } from '../providers/searchhistory/searchhistory';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,7 @@ import { HttpClientModule } from "@angular/common/http";
     BrowserModule,
     HttpClientModule,
     ActionSheet2Module,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -44,8 +49,10 @@ import { HttpClientModule } from "@angular/common/http";
   providers: [
     StatusBar,
     SplashScreen,
+    NativeStorage,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    RestProvider
+    RestProvider,
+    SearchhistoryProvider
   ]
 })
 export class AppModule {}

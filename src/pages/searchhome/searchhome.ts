@@ -1,6 +1,9 @@
+import { SearchhistoryProvider } from './../../providers/searchhistory/searchhistory';
 import { TestPage } from './../test/test';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ItemSliding } from 'ionic-angular';
+import { Storage } from "@ionic/storage";
+import { NativeStorage } from "@ionic-native/native-storage";
 
 /**
  * Generated class for the SearchhomePage page.
@@ -17,21 +20,43 @@ import { IonicPage, NavController, NavParams, ItemSliding } from 'ionic-angular'
 export class SearchhomePage {
   items: string[] = [];
   isHomeP: boolean = true;
+  isSearchHist: boolean = false;
   keywords: any;
   keyword: string;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  searchdata: { searchvalue: string }[] = [];
+  constructor(
+    public navCtrl: NavController,
+    public storage: Storage,
+    private nativeStorage: NativeStorage,
+    public searchProvider: SearchhistoryProvider,
+    public navParams: NavParams
+  ) {}
 
   ionViewDidLoad() {
     this.keywords = this.navParams.get("keywords");
     this.keyword = this.keywords[0];
-
     let length = this.keywords.length;
     console.log(length);
     for (let i = 0; i < length; i++) {
       this.items.push(this.keywords[i]);
     }
-    console.log(this.keywords);
+
+    this.hotwordSearch("111");
+    // 获取本地搜索记录
+    this.searchdata = this.searchProvider.getSearchHis();
+    if (this.searchdata != null && this.searchdata.length > 0) {
+      this.isSearchHist = true;
+    } else {
+      this.isSearchHist = false;
+    }
+  }
+
+  showSearchData():any{
+    this.nativeStorage.getItem('searchHis')
+    .then(
+      data => {this.searchdata = data},
+      error => console.log(error)
+    );
   }
 
   //返回到主页面
@@ -66,7 +91,13 @@ export class SearchhomePage {
     // this.navCtrl.push(TestPage);
   }
 
-  deleteAll() {
+  deleteAll() {}
 
+  hotwordSearch(hotItem:string) {
+    this.searchProvider.addSearchHis(hotItem).then(
+      data=>console.log(data),
+      error=>console.log(error)
+    );
+    this.searchdata = this.searchProvider.getSearchHis();
   }
 }
