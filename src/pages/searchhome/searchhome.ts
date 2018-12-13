@@ -11,7 +11,6 @@ import {
 import { Storage } from "@ionic/storage";
 import { NativeStorage } from "@ionic-native/native-storage";
 import { RestProvider } from "../../providers/rest/rest";
-import { e } from "@angular/core/src/render3";
 
 /**
  * Generated class for the SearchhomePage page.

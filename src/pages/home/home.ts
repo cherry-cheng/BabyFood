@@ -1,3 +1,4 @@
+import { SearchhistoryProvider } from './../../providers/searchhistory/searchhistory';
 import { SearchhomePage } from "./../searchhome/searchhome";
 import { DetailRecipePage } from "./../detail-recipe/detail-recipe";
 import { Component } from "@angular/core";
@@ -45,6 +46,7 @@ export class HomePage {
     public navParams: NavParams,
     public modalCtrl: ModalController,
     public restProvider: RestProvider,
+    public searchProvider: SearchhistoryProvider,
     public event: Events
   ) {
     for (let i = 0; i < 12; i++) {
@@ -69,6 +71,9 @@ export class HomePage {
         }
       }
     });
+
+    //仅仅为了提前初始化
+    this.searchProvider.getSearchHis();
   }
 
   gotoSearch(ev: any) {
@@ -97,12 +102,6 @@ export class HomePage {
           this.listCate2 = this.foodcate.body[1];
           this.listCate3 = this.foodcate.body[2];
           this.listCate4 = this.foodcate.body[3];
-          console.log(this.listCate1);
-          console.log(this.listCate1.bigcategory);
-          console.log(this.listCate1.samllcategory);
-          console.log(this.listCate2);
-          console.log(this.listCate3);
-          console.log(this.listCate4);
         } else {
           return;
         }
