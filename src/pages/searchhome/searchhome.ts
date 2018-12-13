@@ -88,6 +88,12 @@ export class SearchhomePage {
    * @memberof SearchhomePage
    */
   showResult(event: any, keyword: string) {
+    // var idInput = document.getElementById("searchinput");
+    // idInput.onkeyup=(event)=>{
+    //   if(event.keyCode==13) {
+    //     alert("1aaa");
+    //   }
+    // }
     if ("Enter" == event.key) {
       //function
       if (keyword == null || keyword.trim().length == 0) {

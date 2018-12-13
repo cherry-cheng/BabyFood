@@ -2,7 +2,7 @@
   <ion-navbar style="padding:8px 16px;border-bottom: 1px solid #CDCED3">
     <div class="header">
       <form action="javascript:return true;" style="flex:1">
-        <ion-searchbar type="search" (keyup)='showResult($event,inputWord)' [ngModelOptions]="{standalone: true}"
+        <ion-searchbar id="searchinput" type="search" (keyup)='showResult($event,inputWord)' [ngModelOptions]="{standalone: true}"
           [(ngModel)]="inputWord" [placeholder]="keyword" searchbar-md-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"
           searchbar-ios-input-search-icon-svg="../../assets/imgs/ic_search_black.svg">
         </ion-searchbar>
