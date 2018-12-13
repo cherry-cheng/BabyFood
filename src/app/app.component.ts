@@ -16,6 +16,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleLightContent();
       statusBar.overlaysWebView(false);
+      statusBar.backgroundColorByHexString('#e0e0e0');
       splashScreen.hide();
     });
   }
