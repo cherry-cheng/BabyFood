@@ -14,8 +14,8 @@
 
 <ion-content>
   <ion-list style="background-color: white">
-    <ion-item ion-item *ngFor="let item1 of foodList.data" (click)="showDetail(item1.id)">
-<img item-left src="{{item1.imgurl}}">
+    <ion-item ion-item *ngFor="let item1 of foodListArray" (click)="showDetail(item1.id)">
+      <img item-left src="{{item1.imgurl}}">
       <div class="item_right_div">
         <p>{{item1.title}}</p>
         <ul class="ulItem clearFix">
@@ -25,4 +25,10 @@
       </div>
     </ion-item>
   </ion-list>
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)" threshold="100px">
+  <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载中...">
+</ion-infinite-scroll-content>
+</ion-infinite-scroll>
+<!-- <div *ngIf='!hasmore'>我是有底线的——————————————————————</div> -->
 </ion-content>
+

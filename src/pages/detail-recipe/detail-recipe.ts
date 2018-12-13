@@ -9,14 +9,13 @@ import {
   ToastController
 } from "ionic-angular";
 import { BaseUI } from "../../common/baseui";
+import { e } from "@angular/core/src/render3";
 
 /**
- * Generated class for the DetailRecipePage page.
+ *保留以后做滑动选择的数据
  *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
+ * @enum {number}
  */
-
 enum BabyMonth {
   孕期,
   产后,
@@ -53,12 +52,19 @@ export class DetailRecipePage extends BaseUI {
   recipeList: string[] = [];
   testList: string[] = [];
   recipiItem: string = "#6-7";
-  titleName : string;
+  titleName: string;
   foodResponse: any;
   foodList: any = {
     data: [],
     count: 1,
     currentpage: 1
+  };
+  foodListArray: any;
+  hasmore = true;
+  spinner1: boolean = true;
+  params = {
+    page: 1,
+    id: "1"
   };
 
   babymonths: any[];
@@ -95,37 +101,69 @@ export class DetailRecipePage extends BaseUI {
 
   ionViewDidLoad() {
     this.foodid = this.navParams.get("title");
+    this.params.id = this.foodid;
     this.titleName = this.navParams.get("titleName");
-    console.log(this.foodid);
-    var params = { id: this.foodid };
-    this.httpRest.GET("getfoodlist", params, (res, err) => {
+    this.getFoodList();
+  }
+
+  /**
+   *请求获取食物列表数据
+   *
+   * @param {*} idfood
+   * @memberof DetailRecipePage
+   */
+  getFoodList() {
+    this.httpRest.GET("getfoodlist", this.params, (res, err) => {
       if (err) {
         console.log(err);
       }
       if (res) {
         this.foodResponse = res;
         this.foodList = this.foodResponse.body;
+        this.foodListArray = this.foodList.data;
+        this.params.page += 1;
+        this.spinner1 = false;
         console.log(this.foodList);
       }
     });
   }
 
-  // getFoodList(params: string) {
-  //   this.httpRest.getFoodList(params).then(data => {
-  //     this.foodResponse = data;
-  //     this.foodList = this.foodResponse.body;
-  //     console.log(this.foodList);
-  //   });
-  // }
+  doInfinite(infiniteScroll) {
+    if (this.hasmore == false) {
+      infiniteScroll.complete();
+      return;
+    }
+    this.httpRest.GET("getfoodlist", this.params, (res, err) => {
+      if (err) {
+        console.log(err);
+      }
+      if (res) {
+        if (res.body.data.length > 0) {
+          this.foodListArray = this.foodListArray.concat(res.body.data);
+          this.params.page += 1;
+        } else {
+          this.hasmore = false;
+          console.log("没有数据啦！！！");
+        }
+        infiniteScroll.complete();
+      }
+    });
+  }
 
   dismiss() {
     this.viewCtrl.dismiss();
   }
 
-  showDetail(id:any) {
+  showDetail(id: any) {
     this.navCtrl.push(RecipedetailPage, { foodid: id });
   }
 
+  /**
+   *保留以后做滑动选择的监听事件
+   *
+   * @param {*} event
+   * @memberof DetailRecipePage
+   */
   onModel1Change(event: any) {
     console.log(event);
   }
