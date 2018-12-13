@@ -18,8 +18,6 @@ export class RestProvider {
   constructor(public http: HttpClient) {
     console.log("Hello RestProvider Provider");
   }
-  private urlFoodCategory = baseUrl + "getfoodcategory";
-  private urlFoodList = baseUrl + "getfoodlist";
 
   getauthsign() {
     let timestamp : string = new Date().getTime() + "";
@@ -29,35 +27,20 @@ export class RestProvider {
     return timestamp;
   }
 
-  getFoodCategory() {
-    let headers = new HttpHeaders();
-    headers = headers.append("authsign", "" + this.getauthsign());
-    return new Promise(resolve => {
-      this.http.get(this.urlFoodCategory, {headers: headers}).subscribe(
-        data => {
-          resolve(data);
-        },
-        err => {
-          console.log(err);
-        }
-      );
-    });
-  }
-
-  getFoodList(params: string) {
-    let absoluteURL = this.urlFoodList + "?" + params;
-    console.log(absoluteURL);
-    return new Promise(resolve => {
-      this.http.get(absoluteURL).subscribe(
-        data => {
-          resolve(data);
-        },
-        err => {
-          console.log(err);
-        }
-      );
-    });
-  }
+  // getFoodCategory() {
+  //   let headers = new HttpHeaders();
+  //   headers = headers.append("authsign", "" + this.getauthsign());
+  //   return new Promise(resolve => {
+  //     this.http.get(this.urlFoodCategory, {headers: headers}).subscribe(
+  //       data => {
+  //         resolve(data);
+  //       },
+  //       err => {
+  //         console.log(err);
+  //       }
+  //     );
+  //   });
+  // }
 
   /**
    *封装的get和post方法，备用
@@ -84,6 +67,14 @@ export class RestProvider {
       );
   }
 
+  /**
+   *POST请求
+   *
+   * @param {string} url
+   * @param {*} params
+   * @param {(res: any, error: any) => void} [callback]
+   * @memberof RestProvider
+   */
   POST(
     url: string,
     params: any,

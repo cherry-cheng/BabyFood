@@ -85,21 +85,27 @@ export class HomePage {
   }
 
   getFoodCategory() {
-    this.restProvider.getFoodCategory().then(data => {
-      this.foodcate = data;
-      if (this.foodcate.status == 200) {
-        this.listCate1 = this.foodcate.body[0];
-        this.listCate2 = this.foodcate.body[1];
-        this.listCate3 = this.foodcate.body[2];
-        this.listCate4 = this.foodcate.body[3];
-        console.log(this.listCate1);
-        console.log(this.listCate1.bigcategory);
-        console.log(this.listCate1.samllcategory);
-        console.log(this.listCate2);
-        console.log(this.listCate3);
-        console.log(this.listCate4);
-      } else {
-        return;
+    this.restProvider.GET("getfoodcategory",null,(res, err) => {
+      if(err) {
+        console.log(err);
+
+      }
+      if(res) {
+        this.foodcate = res;
+        if (this.foodcate.status == 200) {
+          this.listCate1 = this.foodcate.body[0];
+          this.listCate2 = this.foodcate.body[1];
+          this.listCate3 = this.foodcate.body[2];
+          this.listCate4 = this.foodcate.body[3];
+          console.log(this.listCate1);
+          console.log(this.listCate1.bigcategory);
+          console.log(this.listCate1.samllcategory);
+          console.log(this.listCate2);
+          console.log(this.listCate3);
+          console.log(this.listCate4);
+        } else {
+          return;
+        }
       }
     });
   }
