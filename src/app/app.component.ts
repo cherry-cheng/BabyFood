@@ -14,10 +14,10 @@ export class MyApp {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      splashScreen.hide();
       statusBar.styleLightContent();
       statusBar.overlaysWebView(false);
       statusBar.backgroundColorByHexString('#e0e0e0');
-      splashScreen.hide();
     });
   }
 }

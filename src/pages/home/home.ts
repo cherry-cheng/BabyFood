@@ -56,7 +56,7 @@ export class HomePage {
 
   ionViewDidLoad() {
     this.getFoodCategory();
-    var params = { type: "1" };
+    var params = { type: "2" };
     this.restProvider.GET("getsearchkeywords", params, (res, err) => {
       if (err) {
         console.log(err);

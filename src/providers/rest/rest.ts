@@ -12,7 +12,7 @@ import { Md5 } from "ts-md5/dist/md5";
   and Angular DI.
 */
 
-export const baseUrl = "http://vweizhan.test.opencodes.top:9001/v1.0.2/";
+export const baseUrl = "http://fs.api2.vweizhan.com/v1.0.2/";
 @Injectable()
 export class RestProvider {
   constructor(public http: HttpClient) {
