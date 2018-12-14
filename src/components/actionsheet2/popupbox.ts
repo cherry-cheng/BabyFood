@@ -1,5 +1,4 @@
-import { Component, ChangeDetectorRef, EventEmitter, Output } from '@angular/core';
-import { Actionsheet2controllerProvider } from "./actionsheet2controller"
+import { Component, EventEmitter, Output } from '@angular/core';
 declare var document:any;
 /**
  * yangkaixuan
@@ -13,7 +12,7 @@ declare var document:any;
   `<div (click)="cancelbut()" class="contantback" style="display:none;width:100%;height:100%;position:absolute;z-index: 999999;background-color:black ;opacity: 0; background-size: 100% auto;">
   </div>
   <div class="contant" style="bottom :-182px">
-    <img src='../../assets/imgs/img_alert_tips.svg' class="bg_tips" />
+    <img src='assets/imgs/img_alert_tips.svg' class="bg_tips" />
     <div class="contantbut">
       <div style="display: flex;margin: 0 auto;" *ngFor="let items of button; let idx=index">
         <div style="flex: 1;display: inline-block;" *ngFor="let item of items.value; let idx=index"
@@ -99,8 +98,6 @@ export class PopupboxComponent {
 
   constructor() {
     this.text = "Hello World";
-    var self = this;
-
     this.pop.subscribe(() => {
       document.getElementsByClassName("contantback")[0].style.display =
         "initial";
@@ -123,11 +120,11 @@ export class PopupboxComponent {
         a.push(button.buttons[i]);
       }
       if (a.length) this.button.push({ value: a });
-      for (var i = 0; i < this.button.length && this.button.length != 1; i++) {
-        if (this.button[i].value.length != 4) {
-          var tem_b = 4 - this.button[i].value.length;
+      for (var j = 0; j < this.button.length && this.button.length != 1; j++) {
+        if (this.button[j].value.length != 4) {
+          var tem_b = 4 - this.button[j].value.length;
           for (var w = 0; w < tem_b; w++) {
-            this.button[i].value.push("");
+            this.button[j].value.push("");
           }
         }
       }

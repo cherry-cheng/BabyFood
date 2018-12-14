@@ -6,7 +6,6 @@ import {
   NavParams
 } from "ionic-angular";
 import { Storage } from "@ionic/storage";
-import { NativeStorage } from "@ionic-native/native-storage";
 import { RestProvider } from "../../providers/rest/rest";
 
 /**
@@ -41,7 +40,6 @@ export class SearchhomePage {
   constructor(
     public navCtrl: NavController,
     public storage: Storage,
-    private nativeStorage: NativeStorage,
     public searchProvider: SearchhistoryProvider,
     public restProvider: RestProvider,
     public navParams: NavParams

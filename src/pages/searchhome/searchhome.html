@@ -3,8 +3,8 @@
     <div class="header">
       <form action="javascript:return true;" style="flex:1">
         <ion-searchbar id="searchinput" type="search" (keyup)='showResult($event,inputWord)' [ngModelOptions]="{standalone: true}"
-          [(ngModel)]="inputWord" [placeholder]="keyword" searchbar-md-input-search-icon-svg="../../assets/imgs/ic_search_black.svg"
-          searchbar-ios-input-search-icon-svg="../../assets/imgs/ic_search_black.svg">
+          [(ngModel)]="inputWord" [placeholder]="keyword" searchbar-md-input-search-icon-svg="assets/imgs/ic_search_black.svg"
+          searchbar-ios-input-search-icon-svg="assets/imgs/ic_search_black.svg">
         </ion-searchbar>
       </form>
       <span class="search_btn" (click)="goBack()">取消</span>
@@ -16,7 +16,7 @@
     <div class="searchHistory" *ngIf='isSearchHist'>
       <h4>
         <p>搜索历史</p>
-        <img src="../../assets/imgs/icon_searchstory_del.svg" alt="" (click)="deleteAll()">
+        <img src="assets/imgs/icon_searchstory_del.svg" alt="" (click)="deleteAll()">
       </h4>
       <span *ngFor="let item of searchdata" (click)="gotoResult(item.searchvalue)">{{item.searchvalue}}</span>
     </div>
@@ -28,7 +28,7 @@
   <div id="divResult" *ngIf='!isHomeP'>
     <div class="searchNone" *ngIf="!isHasResult">
       <div>
-        <img src="../../assets/imgs/search_babydata_placeholder.svg" alt="">
+        <img src="assets/imgs/search_babydata_placeholder.svg" alt="">
       </div>
       <p>竟然一个结果都没有</p>
     </div>
@@ -58,7 +58,7 @@
       <ul>
         <li class="clearFix">
           <div class="left">
-            <img src="../../assets/imgs/img_pareknow_placeholder.svg" alt="">
+            <img src="assets/imgs/img_pareknow_placeholder.svg" alt="">
           </div>
           <div class="right">
             <h5>新生儿睡中带笑 在做什么美梦</h5>
@@ -67,7 +67,7 @@
         </li>
         <li class="clearFix">
           <div class="left">
-            <img src="../../assets/imgs/img_pareknow_placeholder.svg" alt="">
+            <img src="assets/imgs/img_pareknow_placeholder.svg" alt="">
           </div>
           <div class="right">
             <h5>注意啦！这种学步工具早被拉入黑名单了</h5>
@@ -76,7 +76,7 @@
         </li>
         <li class="clearFix">
           <div class="left">
-            <img src="../../assets/imgs/img_pareknow_placeholder.svg" alt="">
+            <img src="assets/imgs/img_pareknow_placeholder.svg" alt="">
           </div>
           <div class="right">
             <h5>佩带耳模矫正器最佳治疗时间段是？新生儿可以佩带耳模矫正…</h5>
@@ -94,7 +94,7 @@
       <ul>
         <li class="clearFix">
           <div class="left">
-            <img src="../../assets/imgs/img_eat_placeholder.svg" alt="">
+            <img src="assets/imgs/img_eat_placeholder.svg" alt="">
           </div>
           <div class="right">
             <h5>三黄鸡</h5>
@@ -105,7 +105,7 @@
         </li>
         <li class="clearFix">
           <div class="left">
-            <img src="../../assets/imgs/img_eat_placeholder.svg" alt="">
+            <img src="assets/imgs/img_eat_placeholder.svg" alt="">
           </div>
           <div class="right">
             <h5>麻辣鸡肉串</h5>
@@ -116,7 +116,7 @@
         </li>
         <li class="clearFix">
           <div class="left">
-            <img src="../../assets/imgs/img_eat_placeholder.svg" alt="">
+            <img src="assets/imgs/img_eat_placeholder.svg" alt="">
           </div>
           <div class="right">
             <h5>鸡脆骨</h5>

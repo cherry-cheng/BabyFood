@@ -93,7 +93,6 @@ export class HomePage {
     this.restProvider.GET("getfoodcategory",null,(res, err) => {
       if(err) {
         console.log(err);
-
       }
       if(res) {
         this.foodcate = res;

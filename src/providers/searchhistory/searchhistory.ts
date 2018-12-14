@@ -3,12 +3,8 @@ import { Storage } from '@ionic/storage';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NativeStorage } from "@ionic-native/native-storage";
-
-import { HttpHeaders, HttpParams } from "@angular/common/http";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/catch";
-import { isObject } from "rxjs/util/isObject";
-import { e } from '@angular/core/src/render3';
 
 /*
   Generated class for the SearchhistoryProvider provider.

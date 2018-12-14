@@ -1,5 +1,5 @@
 import { PopupboxComponent } from './popupbox';
-import { Injectable, ComponentFactoryResolver, Injector, ApplicationRef ,Component} from '@angular/core';
+import { Injectable, ComponentFactoryResolver, Injector, ApplicationRef} from '@angular/core';
 
 /*
   Generated class for the Actionsheet2controllerProvider provider.
@@ -9,8 +9,6 @@ import { Injectable, ComponentFactoryResolver, Injector, ApplicationRef ,Compone
 */
 @Injectable()
 export class Actionsheet2controllerProvider {
-
-  private Factory:ComponentFactoryResolver
   private ref :any
   constructor(private appRef: ApplicationRef, private componentFactoryResolver: ComponentFactoryResolver, private injector: Injector) {
     let factory = this.componentFactoryResolver.resolveComponentFactory(PopupboxComponent);

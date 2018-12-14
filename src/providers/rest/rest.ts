@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/catch";
 import { isObject } from "rxjs/util/isObject";
-import { Md5 } from 'ts-md5/dist/md5';
+import { Md5 } from "ts-md5/dist/md5";
 
 /*
   Generated class for the RestProvider provider.
@@ -19,13 +19,13 @@ export class RestProvider {
     console.log("Hello RestProvider Provider");
   }
 
-  getauthsign() : string {
-    let timestamp : string = new Date().getTime() + "";
-    let time : string;
-    timestamp = timestamp.substring(0,10);
+  getauthsign(): string {
+    let timestamp: string = new Date().getTime() + "";
+    let time: string;
+    timestamp = timestamp.substring(0, 10);
     time = timestamp;
     console.log(timestamp);
-    timestamp = Md5.hashStr(timestamp + 'bbfs') + "";
+    timestamp = Md5.hashStr(timestamp + "bbfs") + "";
     console.log(timestamp);
     timestamp = time + Md5.hashStr(timestamp);
     console.log(timestamp);
@@ -60,12 +60,13 @@ export class RestProvider {
     callback?: (res: any, error: any) => void
   ): void {
     let headers1 = new HttpHeaders();
-    headers1 = headers1.append("authsign", ""+this.getauthsign());
-    console.log(this.getauthsign());
-
+    headers1 = headers1.append('authsign', this.getauthsign());
     let absoluteUrl = baseUrl + url;
     this.http
-      .get(absoluteUrl, { headers: headers1, params: this.encodeComplexHttpParams(params)})
+      .get(absoluteUrl, {
+        headers: headers1,
+        params: this.encodeComplexHttpParams(params)
+      })
       .subscribe(
         res => {
           callback && callback(res, null);
@@ -144,6 +145,4 @@ export class RestProvider {
     if (!params) return null;
     return new HttpParams({ fromString: this.paramsString(params) });
   }
-
-
 }

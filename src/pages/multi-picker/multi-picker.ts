@@ -1,6 +1,6 @@
 import { AfterContentInit, Component, EventEmitter, forwardRef, HostListener, Input, OnDestroy, Optional, Output, ViewEncapsulation } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { PickerController, Form, Item, PickerColumn, PickerCmp, PickerColumnCmp } from 'ionic-angular';
+import { PickerController, Item, PickerColumn, PickerCmp, PickerColumnCmp } from 'ionic-angular';
 import { MultiPickerColumn, MultiPickerOption } from './multi-picker-options';
 
 export const MULTI_PICKER_VALUE_ACCESSOR: any = {
@@ -83,7 +83,7 @@ export class MultiPicker implements AfterContentInit, ControlValueAccessor, OnDe
    */
   @Output() ionCancel: EventEmitter<any> = new EventEmitter();
 
-  constructor(private _form: Form, @Optional() private _item: Item, @Optional() private _pickerCtrl: PickerController) {
+  constructor(@Optional() private _item: Item, @Optional() private _pickerCtrl: PickerController) {
     // this._form.register(this);
     if (_item) {
       this.id = 'dt-' + _item.registerInput('multi-picker');
