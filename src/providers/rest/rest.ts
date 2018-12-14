@@ -12,7 +12,7 @@ import { Md5 } from 'ts-md5/dist/md5';
   and Angular DI.
 */
 
-export const baseUrl = "http://fushi.api.vweizhan.com/v1.0.2/";
+export const baseUrl = "http://vweizhan.test.opencodes.top:9001/v1.0.2/";
 @Injectable()
 export class RestProvider {
   constructor(public http: HttpClient) {
@@ -60,7 +60,7 @@ export class RestProvider {
     callback?: (res: any, error: any) => void
   ): void {
     let headers1 = new HttpHeaders();
-    headers1 = headers1.append('authsign', this.getauthsign());
+    headers1 = headers1.append("authsign", ""+this.getauthsign());
     console.log(this.getauthsign());
 
     let absoluteUrl = baseUrl + url;

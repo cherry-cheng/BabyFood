@@ -1,7 +1,7 @@
 import { RestProvider, baseUrl } from './../../providers/rest/rest';
 import { Actionsheet2controllerProvider } from './../../components/actionsheet2/actionsheet2controller';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController, ModalController } from 'ionic-angular';
+import { NavController, NavParams, ViewController, ModalController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 
 /**
@@ -10,8 +10,6 @@ import { DomSanitizer } from '@angular/platform-browser';
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
-@IonicPage()
 @Component({
   selector: "page-recipedetail",
   templateUrl: "recipedetail.html"

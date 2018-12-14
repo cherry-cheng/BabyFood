@@ -9,7 +9,6 @@ import {
   ToastController
 } from "ionic-angular";
 import { BaseUI } from "../../common/baseui";
-import { e } from "@angular/core/src/render3";
 
 /**
  *保留以后做滑动选择的数据

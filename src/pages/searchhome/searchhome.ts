@@ -1,12 +1,9 @@
 import { RecipedetailPage } from './../recipedetail/recipedetail';
 import { SearchhistoryProvider } from "./../../providers/searchhistory/searchhistory";
-import { TestPage } from "./../test/test";
 import { Component } from "@angular/core";
 import {
-  IonicPage,
   NavController,
-  NavParams,
-  ItemSliding
+  NavParams
 } from "ionic-angular";
 import { Storage } from "@ionic/storage";
 import { NativeStorage } from "@ionic-native/native-storage";
@@ -18,8 +15,6 @@ import { RestProvider } from "../../providers/rest/rest";
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
-@IonicPage()
 @Component({
   selector: "page-searchhome",
   templateUrl: "searchhome.html"
