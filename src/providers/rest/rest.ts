@@ -12,18 +12,23 @@ import { Md5 } from 'ts-md5/dist/md5';
   and Angular DI.
 */
 
-export const baseUrl = "http://vweizhan.test.opencodes.top:9001/v1.0.2/";
+export const baseUrl = "http://fushi.api.vweizhan.com/v1.0.2/";
 @Injectable()
 export class RestProvider {
   constructor(public http: HttpClient) {
     console.log("Hello RestProvider Provider");
   }
 
-  getauthsign() {
+  getauthsign() : string {
     let timestamp : string = new Date().getTime() + "";
+    let time : string;
     timestamp = timestamp.substring(0,10);
+    time = timestamp;
+    console.log(timestamp);
     timestamp = Md5.hashStr(timestamp + 'bbfs') + "";
-    timestamp = Md5.hashStr(timestamp) + "";
+    console.log(timestamp);
+    timestamp = time + Md5.hashStr(timestamp);
+    console.log(timestamp);
     return timestamp;
   }
 
@@ -54,9 +59,13 @@ export class RestProvider {
     params: any,
     callback?: (res: any, error: any) => void
   ): void {
+    let headers1 = new HttpHeaders();
+    headers1 = headers1.append('authsign', this.getauthsign());
+    console.log(this.getauthsign());
+
     let absoluteUrl = baseUrl + url;
     this.http
-      .get(absoluteUrl, { params: this.encodeComplexHttpParams(params) })
+      .get(absoluteUrl, { headers: headers1, params: this.encodeComplexHttpParams(params)})
       .subscribe(
         res => {
           callback && callback(res, null);
