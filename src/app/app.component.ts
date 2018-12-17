@@ -18,6 +18,13 @@ export class MyApp {
       statusBar.styleLightContent();
       statusBar.overlaysWebView(false);
       statusBar.backgroundColorByHexString('#e0e0e0');
+
+
+      let mobclickAgent = (<any>window).MobclickAgent;
+      if (mobclickAgent) {
+        mobclickAgent.init();
+        mobclickAgent.setDebugMode(false);
+      }
     });
   }
 }
