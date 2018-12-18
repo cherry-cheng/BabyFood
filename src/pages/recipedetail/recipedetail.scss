@@ -1,30 +1,36 @@
 page-recipedetail {
   #navMy {
     display: block;
-    background-color: #f9f9f9;
-    background-size: 100% 48px;
+    // background-color: #fff;
+    // background-size: 100% 48px;
     width: 100%;
-    height: 48px;
-    line-height: 48px;
-    overflow: hidden;
+    height: 44px;
+    line-height: 44px;
+    overflow: hidden;;
+    padding: 0;
+    min-height: 44px;
+    padding: 0 16px;
+    .toolbar-background-md,.toolbar-background-ios{
+      background-color: #fff;
+
+    }
   }
 
   .navMy-left {
-    width: 40px;
-    height: 48px;
+    width: 30px;
+    height: 44px;
     position: absolute;
   }
 
   .navMy-left img {
-    //src:url('../');
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 10px 6px 10px 0;
   }
 
   .navMy-center {
     display: flex;
-    height: 48px;
+    height: 44px;
     position: absolute;
     left: 40px;
     right: 40px;
@@ -41,9 +47,8 @@ page-recipedetail {
   }
 
   .navMy-right {
-    // width: 80px;
     padding-right: 16px;
-    height: 48px;
+    height: 44px;
     position: absolute;
     right: 0;
   }
@@ -57,5 +62,12 @@ page-recipedetail {
     height: 100%;
     border: none;
   }
+  .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before,
+  .header-ios::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before,{
+    background-image: none;
+  }
+  // .header-md .toolbar-md:last-child .toolbar-background-md,.header-ios .toolbar-ios:last-child .toolbar-background-ios{
+  //   border-width: 0;
+  // }
 
 }
