@@ -1,0 +1,53 @@
+page-login {
+
+    .div{
+        width: 100%;
+        height: 80%;
+    }
+
+    .scroll-content {
+        padding: 0px !important;
+    }
+    
+
+    .img .backpic{
+        width: 100%;
+        // height: 100%;
+        height: initial !important;
+        min-width: 100%;
+    }
+
+    .span{
+        display:inline-block;
+        width: 52px;
+        height: 52px;
+    }
+
+    .img{
+        width: 30px;
+        height: 50px;
+        display: inline;
+        //height: -webkit-fill-available;
+    }
+
+    .grid {
+        padding: 0px;
+    }
+    .col {
+        padding: 0px;
+    }
+    
+    [col-2] {
+        padding: 0px;
+    }
+
+    .img .one{
+        padding-right: 50px;
+    }
+
+    .body {
+        height: 105% !important;
+        max-height: 100%;
+    }
+        
+}

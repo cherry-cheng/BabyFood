@@ -49,7 +49,7 @@ export class SearchhomePage {
     this.keywords = this.navParams.get("keywords");
     this.keyword = this.keywords[0];
     let length = this.keywords.length;
-    console.log(length);
+    // console.log(length);
     for (let i = 0; i < length; i++) {
       this.items.push(this.keywords[i]);
     }
@@ -89,7 +89,7 @@ export class SearchhomePage {
     if ("Enter" == event.key) {
       //function
       if (keyword == null || keyword.trim().length == 0) {
-        console.log(this.keyword);
+        // console.log(this.keyword);
         this.gotoResult(this.keyword);
       } else {
         this.gotoResult(keyword);
@@ -115,7 +115,7 @@ export class SearchhomePage {
       if (res) {
         console.log(res);
         this.searchResultdata = res.body.food;
-        console.log(this.searchResultdata);
+        // console.log(this.searchResultdata);
 
         if (this.searchResultdata != null && this.searchResultdata.length > 0) {
           this.isHasResult = true;

@@ -1,0 +1,48 @@
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton="true" id="navMy">
+    <div style="height:30px; width: 40px; margin-top: 12px" (click)="dismiss()">
+      <img src="assets/imgs/ic_back_black.svg" />
+    </div>
+    <div style="height:40px; width:200px; position:absolute; top:15px; left:calc(50% - 100px); text-align: center;line-height:30px;">
+      <span style="color:black;">关于萌宝宝辅食</span>
+    </div>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <div style="height:100px; width: 100%; margin-top: 50px !important; text-align: center;">
+      <img src="assets/imgs/img_about_logo.svg" alt="">
+    </div>
+  </div>
+  <ion-list>
+    <ion-item >
+      <h2 style="height:30px; width: 40%; display: inline-block;">版本号</h2>
+      <p style="float: right;">{{versionCode}}</p>
+      <!-- <button ion-button clear item-end>23M</button> -->
+    </ion-item>
+  </ion-list>
+  <ion-list>
+      <ion-item >
+        <h2 style="height:30px; width: 40%; display: inline-block;">微信公众号</h2>
+        <p style="float: right;">bbfsapp</p>
+        <!-- <button ion-button clear item-end>23M</button> -->
+      </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item >
+          <h2 style="height:30px; width: 40%; display: inline-block;">微博</h2>
+          <p style="float: right;">@萌宝宝APP</p>
+          <!-- <button ion-button clear item-end>23M</button> -->
+        </ion-item>
+      </ion-list>
+  
+</ion-content>

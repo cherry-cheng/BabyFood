@@ -1,0 +1,94 @@
+<!--
+  Generated template for the CollectPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-card>
+    <ion-card-header>
+      收藏
+    </ion-card-header>
+    <ion-card-content style="height:35px;">
+      <div *ngIf="foodMenu" style="font-size:15px; height:30px; width:200px; position:absolute; bottom:calc(12%); left:calc(50% - 100px); text-align: center;line-height:30px;">
+        <span (tap)="gotoFood()" style="color:#FF5B8D ;padding-right:25%">食谱</span>
+        <span (tap)="gotoHistory()" style="color:black ;padding-left:25%">浏览历史</span>
+      </div>
+      <div *ngIf="history" style="font-size:15px; height:30px; width:200px; position:absolute; bottom:calc(12%); left:calc(50% - 100px); text-align: center;line-height:30px;">
+        <span (tap)="gotoFood()" style="color:black ;padding-right:25%">食谱</span>
+        <span (tap)="gotoHistory()" style="color:#FF5B8D ;padding-left:25%">浏览历史</span>
+      </div>
+      <div *ngIf="foodMenu" style=" height:5px; width:180px; position:absolute; bottom:calc(5%); left:calc(50% - 90px); text-align: center;line-height:30px;">
+        <div style="background-color:#FF5B8D ; height:4px; width: 20px; float: left; border-radius: 2px;"></div>
+      </div>
+      <div *ngIf="history" style=" height:5px; width:180px; position:absolute; bottom:calc(5%); left:calc(50% - 90px); text-align: center;line-height:30px;">
+        <div style="background-color:#FF5B8D ; height: 4px; width: 20px; float:right; margin-right: 15px;border-radius: 2px"></div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-header>
+
+<ion-content padding>
+
+  <div *ngIf="foodMenu">
+    <div class="searchNone" *ngIf='foodListArray.length == 0'>
+          <div>
+            <img src="assets/imgs/search_babydata_placeholder.svg" alt="">
+          </div>
+          <p>这里空空如也</p>
+        </div>
+    <ion-list style="background-color: white" style="box-shadow: none;" *ngFor="let item of foodListArray" (click)="showMenu()">
+      <ion-item-sliding>
+        <ion-item (click)="goDetail(item)">
+          <img item-left src="{{item.imgurl}}">
+          <div class="item_right_div">
+            <p>{{item.title}}</p>
+            <ul class="ulItem clearFix">
+              <li *ngFor="let item1 of item.label" style="background:rgba(247,247,247,1);">{{item1.name}}</li>
+            </ul>
+            <span>{{item.loves}}人已收藏</span>
+          </div>
+        </ion-item>
+        <ion-item-options side="right" style="box-shadow: none;">
+          <button ion-button color="white" style="box-shadow: none;" (click)="cancelCollect(item)">
+            <ion-icon><img src="assets/imgs/ic_cancelcollection.svg" alt=""></ion-icon>
+            删除
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </div>
+
+  <div *ngIf="history">
+    <div class="searchNone" *ngIf='lookHisData.length == 0'>
+          <div>
+            <img src="assets/imgs/search_babydata_placeholder.svg" alt="">
+          </div>
+          <p>这里空空如也</p>
+        </div>
+    <ion-list no-lines style="background-color: white" style="box-shadow: none;" *ngFor="let item of lookHisData" (click)="showMenu()">
+      <ion-item-sliding>
+        <ion-item (click)="goDetail(item)">
+          <img item-left src="{{item.imgurl}}">
+          <div class="item_right_div">
+            <p>{{item.title}}</p>
+            <ul class="ulItem clearFix">
+              <li *ngFor="let item1 of item.label" style="background:rgba(247,247,247,1);">{{item1.name}}</li>
+            </ul>
+            <span>{{item.loves}}人已收藏</span>
+          </div>
+        </ion-item>
+        <!-- <ion-item-options side="right" style="box-shadow: none;">
+          <button ion-button color="white" style="box-shadow: none;" (click)="detelHis(item)">
+            <ion-icon><img src="assets/imgs/ic_cancelcollection.svg" alt=""></ion-icon>
+            删除
+          </button>
+        </ion-item-options> -->
+      </ion-item-sliding>
+    </ion-list>
+  </div>
+
+  
+
+
+</ion-content>

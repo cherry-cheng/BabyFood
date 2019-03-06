@@ -9,6 +9,8 @@ import {
   ModalController
 } from "ionic-angular";
 import { RestProvider } from "../../providers/rest/rest";
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: "page-home",
@@ -47,7 +49,8 @@ export class HomePage {
     public modalCtrl: ModalController,
     public restProvider: RestProvider,
     public searchProvider: SearchhistoryProvider,
-    public event: Events
+    public event: Events,
+    private storageData: Storage
   ) {
     for (let i = 0; i < 12; i++) {
       this.recipeList.push(this.recipiItem);
@@ -55,6 +58,9 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
+    this.getLocalUserID();
+
+
     this.getFoodCategory();
     var params = { type: "2" };
     this.restProvider.GET("getsearchkeywords", params, (res, err) => {
@@ -74,6 +80,28 @@ export class HomePage {
 
     //仅仅为了提前初始化
     this.searchProvider.getSearchHis();
+  }
+
+  getLocalUserID(){
+    this.storageData.get('userID').then((val) => {
+      // var lenth= val.length();
+      if(val != null) {
+        console.log('wang1111111取出存储 ' + val);
+      } else {
+        console.log('wang111111没有uid');
+        var params = {'cid':"1"};
+        this.restProvider.GET("getuid",params,(res, err) => {
+          
+          if(res.status == 200){
+            let userID =res.body.uid;
+            console.log('wang11111111 用户userID为'+userID);
+            this.storageData.set('userID', res.body.uid);
+          }
+
+        })
+
+      }
+    });
   }
 
   gotoSearch(ev: any) {

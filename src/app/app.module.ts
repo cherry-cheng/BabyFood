@@ -13,33 +13,71 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
+import { CollectPage } from '../pages/collect/collect';
+import { MyPage } from '../pages/my/my';
+import { LoginPage } from '../pages/login/login'
+import { SettingPage} from '../pages/setting/setting'
+import { AboutPage} from '../pages/about/about'
+import { ProtocolPage } from '../pages/protocol/protocol'
 import { RestProvider } from '../providers/rest/rest';
 import { HttpClientModule } from "@angular/common/http";
+import { AppVersion } from '@ionic-native/app-version';
 import { IonicStorageModule } from "@ionic/storage";
 
+// import { QQSDK, QQShareOptions } from '@ionic-native/qqsdk';
+import { QQSDK } from '@ionic-native/qqsdk';
 import { SearchhistoryProvider } from '../providers/searchhistory/searchhistory';
+
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    CollectPage,
+    MyPage,
+    TabsPage,
+    LoginPage,
+    SettingPage,
+    AboutPage,
+    ProtocolPage,
     DetailRecipePage,
     RecipedetailPage,
     SearchhomePage,
     TestPage,
     MultiPicker
   ],
-  imports: [
+  // imports: [
+  //   BrowserModule,
+  //   HttpClientModule,
+  //   ActionSheet2Module,
+  //   IonicStorageModule.forRoot(),
+  //   IonicModule.forRoot(MyApp)
+  // ],
+  imports: [ 
     BrowserModule,
     HttpClientModule,
     ActionSheet2Module,
     IonicStorageModule.forRoot(),
-    IonicModule.forRoot(MyApp)
-  ],
+    IonicModule.forRoot(MyApp,{
+    tabsHideOnSubPages: 'true' ,
+    // iconMode: 'ios',
+    // mode: 'ios',
+    // modalEnter: 'modal-slide-in',
+    // modalLeave: 'modal-slide-out',
+    }) ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
+    CollectPage,
+    MyPage,
+    TabsPage,
+    LoginPage,
+    SettingPage,
+    AboutPage,
+    ProtocolPage,
     DetailRecipePage,
     RecipedetailPage,
     SearchhomePage,
@@ -52,7 +90,9 @@ import { SearchhistoryProvider } from '../providers/searchhistory/searchhistory'
     NativeStorage,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     RestProvider,
-    SearchhistoryProvider
+    SearchhistoryProvider,
+    QQSDK,
+    AppVersion,
   ]
 })
 export class AppModule {}

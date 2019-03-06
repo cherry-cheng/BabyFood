@@ -14,3 +14,38 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+.button-inner{
+    color: black;
+}
+
+.alert-md .alert-wrapper{
+    -webkit-box-shadow: none;
+ }
+
+ .tabs-md .tab-button {
+    min-height: 3.0rem;
+    font-weight: normal;
+    color: rgba(60, 60, 60, 0.7);
+    padding: 0;
+    height: 40px !important;
+}
+
+.tabbar{
+    height: 49px !important;
+}
+
+.tab-button-text{
+    font-size: 10px;
+
+}
+.tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text {
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+.ion-tab-icon-md-base, .tabs-md .tab-button[aria-selected=true] .ion-md-tab-classify, .tabs-md .tab-button[aria-selected=false] .ion-md-tab-classify, .tabs-md .tab-button[aria-selected=true] .ion-md-tab-collection, .tabs-md .tab-button[aria-selected=false] .ion-md-tab-collection, .tabs-md .tab-button[aria-selected=true] .ion-md-tab-me, .tabs-md .tab-button[aria-selected=false] .ion-md-tab-me {
+    min-width: 0 !important;
+    height: 25px;
+}

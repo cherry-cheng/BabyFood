@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>tabbar_select_classify</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="97.2791727%" id="linearGradient-1">
+            <stop stop-color="#FF759F" offset="0%"></stop>
+            <stop stop-color="#FF306F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="分类" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-128.000000, -886.000000)" id="tabbar-1">
+            <g transform="translate(0.000000, 880.000000)">
+                <g id="Group-7">
+                    <g id="Group-5" transform="translate(95.000000, 0.000000)">
+                        <g id="Group" transform="translate(21.000000, 3.000000)">
+                            <g transform="translate(12.000000, 3.000000)" id="ic_classify_selected">
+                                <g>
+                                    <rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="24" height="24"></rect>
+                                    <path d="M3.5,5 L20.5,5 C20.7761424,5 21,5.22385763 21,5.5 C21,5.77614237 20.7761424,6 20.5,6 L3.5,6 C3.22385763,6 3,5.77614237 3,5.5 C3,5.22385763 3.22385763,5 3.5,5 Z M3.5,19 L20.5,19 C20.7761424,19 21,19.2238576 21,19.5 C21,19.7761424 20.7761424,20 20.5,20 L3.5,20 C3.22385763,20 3,19.7761424 3,19.5 C3,19.2238576 3.22385763,19 3.5,19 Z" id="Combined-Shape" fill="#000000"></path>
+                                    <rect id="Rectangle-2-Copy" fill="url(#linearGradient-1)" x="3" y="12" width="18" height="1" rx="0.5"></rect>
+                                    <circle id="Oval" fill="url(#linearGradient-1)" cx="12" cy="12.5" r="3"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

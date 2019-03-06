@@ -10,6 +10,19 @@ import {
 } from "ionic-angular";
 import { BaseUI } from "../../common/baseui";
 
+
+//聊天信息的属性
+export class ChatMessage {
+  imgurl: string;
+  id: string;
+  loves: string;
+  title: string;
+  // toUserId: string;//发送给谁的
+  // time: number | string;
+  // message: string;
+  // status: string;
+}
+
 /**
  *保留以后做滑动选择的数据
  *
@@ -53,6 +66,7 @@ export class DetailRecipePage extends BaseUI {
   recipiItem: string = "#6-7";
   titleName: string;
   foodResponse: any;
+  foodModel:ChatMessage;
   foodList: any = {
     data: [],
     count: 1,
@@ -79,7 +93,8 @@ export class DetailRecipePage extends BaseUI {
     public navParams: NavParams,
     public viewCtrl: ViewController,
     public httpRest: RestProvider,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    
   ) {
     super();
     for (let i = 0; i < 3; i++) {
@@ -153,8 +168,12 @@ export class DetailRecipePage extends BaseUI {
     this.viewCtrl.dismiss();
   }
 
-  showDetail(id: any) {
-    this.navCtrl.push(RecipedetailPage, { foodid: id });
+  showDetail(id:any) {
+    console.log(111111);
+    console.log(id);
+    console.log (typeof id);
+    // console.log('wang'+JSON.stringify(id));
+    this.navCtrl.push(RecipedetailPage, {foodid:id});
   }
 
   /**

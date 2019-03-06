@@ -1,0 +1,35 @@
+
+    .ion-tab-icon-base {
+        width: 32px !important;
+        height: 32px !important;
+        padding: 4px 4px 2px;
+    }
+    .ion-tab-icon-md-base {
+        min-width: 0 !important;
+        height: 32px;
+    }
+    $tabImageName: 'classify' 'collection' 'me';
+    @for $i from 1 to 4 {
+        //for ios
+        .ion-ios-tab-#{nth($tabImageName, $i)} {
+            @extend .ion-tab-icon-base;
+            content: url("../assets/imgs/icon_#{nth($tabImageName, $i)}_on.svg");
+        }
+        .ion-ios-tab-#{nth($tabImageName, $i)}-outline {
+            @extend .ion-tab-icon-base;
+            content: url("../assets/imgs/icon_#{nth($tabImageName, $i)}_off.svg");
+        }
+        // for android
+        .tabs-md .tab-button[aria-selected=true] {
+            .ion-md-tab-#{nth($tabImageName, $i)} {
+                @extend .ion-tab-icon-md-base;
+                content: url("../assets/imgs/icon_#{nth($tabImageName, $i)}_on.svg");
+            }
+        }
+        .tabs-md .tab-button[aria-selected=false] {
+            .ion-md-tab-#{nth($tabImageName, $i)} {
+                @extend .ion-tab-icon-md-base;
+                content: url("../assets/imgs/icon_#{nth($tabImageName, $i)}_off.svg");
+            }
+        }
+    }

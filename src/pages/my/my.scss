@@ -1,0 +1,63 @@
+page-my {
+
+  .searchNone {
+    text-align: center;
+    height: 150px;
+    font-size: 15px;
+    color: #4A4A4A;
+
+    div {
+      padding-top: 50px;
+      margin-bottom: 7px;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+    }
+
+  }
+
+  .header-md::after,
+  .tabs-md[tabsPlacement="top"]>.tabbar::after,
+  .footer-md::before,
+  .tabs-md[tabsPlacement="bottom"]>.tabbar::before {
+    background-image: none;
+  }
+
+
+  .list-ios {
+    margin: -1px 0 0px;
+  }
+
+  .item-md ion-thumbnail ion-img,
+  .item-md ion-thumbnail img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .item-md ion-thumbnail {
+    margin: 0px;
+    min-width: 24px;
+    min-height: 24px;
+  }
+
+  .item-md ion-thumbnail[item-start] {
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+  
+  ion-label {
+    font-size: 15px;
+    color: black;
+  }
+
+  .list-md {
+    margin: 0px 0 0px;
+  }
+
+
+}

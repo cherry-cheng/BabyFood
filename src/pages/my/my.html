@@ -1,0 +1,72 @@
+<!--
+  Generated template for the MyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <div class="searchNone" *ngIf="!isHasResult">
+    <div *ngIf="!headImaUrl">
+      <img src="assets/imgs/icon_user_placeholder.svg" alt="" (click)="showModal()">
+    </div>
+    <div *ngIf="headImaUrl">
+      <img src="{{headImaUrl}}" alt="">
+      <!-- <img src="assets/imgs/ic_back_black.svg" alt=""> -->
+    </div>
+    <!-- <div *ngIf="!userName"> -->
+      <p *ngIf="!userName" (click)="showModal()">点击登录</p>
+      <p *ngIf="userName" >{{userName}}</p>
+    <!-- </div> -->
+    <!-- <div *ngIf="userName">
+      <p (tap)="showModal()">{{userName}}</p>
+    </div> -->
+    
+    <!-- <div>
+      <img *ngIf="expression" src="assets/imgs/icon_user_placeholder.svg" alt="">
+    </div>
+    <p (tap)="showModal()">{{userName}}</p> -->
+  </div>
+</ion-header>
+
+<ion-content padding>
+    <!-- <ion-list>
+        <ion-item (click)="sahreToOther()">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/icon_lists_collected.svg">
+          </ion-thumbnail>
+          <p>分享其他宝妈</p>
+        </ion-item>
+      </ion-list>
+      <ion-list> -->
+          <!-- <ion-item (click)="attionWeibo()">
+            <ion-thumbnail item-start>
+              <img src="assets/imgs/icon_lists_qqqun.svg">
+            </ion-thumbnail>
+            <p>一键加群</p>
+          </ion-item>
+        </ion-list>
+        <ion-list> -->
+            <!-- <ion-item>
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/icon_lists_weibo.svg">
+              </ion-thumbnail>
+              <p>一键关注微博</p>
+            </ion-item>
+          </ion-list> -->
+          <ion-list>
+              <ion-item (tap)="gotoSet()">
+                <ion-thumbnail item-start>
+                  <img  src="assets/imgs/icon_lists_setting.svg">
+                </ion-thumbnail>
+                <p>设置</p>
+              </ion-item>
+            </ion-list>
+            <ion-list>
+                <ion-item (tap)="gotoAbout()">
+                  <ion-thumbnail item-start>
+                    <img src="assets/imgs/icon_lists_about.svg">
+                  </ion-thumbnail>
+                  <p>关于萌宝宝</p>
+                </ion-item>
+              </ion-list>
+</ion-content>

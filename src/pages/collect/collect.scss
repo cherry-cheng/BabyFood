@@ -1,0 +1,131 @@
+page-collect {
+
+  .scroll-content {
+    padding: 0px !important;
+  }
+
+  .card {
+    margin: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: none !important;
+  }
+
+  .card-header {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+  }
+
+  .searchNone {
+    text-align: center;
+    height: 100%;
+    font-size: 15px;
+    color: #4A4A4A;
+
+    div {
+      padding-top: 75px;
+      margin-bottom: 7px;
+    }
+
+  }
+
+  .list {
+    margin: 0px;
+  }
+
+  .floatMenu {
+    width: 100%;
+    height: 30px;
+    background-color: #FFFFFF;
+    margin-bottom: 5px;
+    color: #999999;
+    font-weight: bold;
+  }
+
+  .col {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+
+    span {
+      font-size: 15px;
+      font-family: PingFang-SC-Medium;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 1);
+    }
+
+    img {
+      float: none;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  .item {
+    border-bottom: 0px !important;
+    padding-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: normal;
+
+    img {
+      margin: 0px 0px 0px 0 !important;
+      width: 35%;
+      height: 74px;
+      border-radius: 4px;
+    }
+    p {
+      font-size: 17px;
+      font-family: PingFang-SC-Bold;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 1);
+      margin: 0;
+    }
+  }
+
+  .item .item_right_div {
+    width: 100%;
+    padding-left: 8px;
+
+    span {
+      font-size: 11px;
+      font-family: PingFang-SC-Medium;
+      font-weight: 500;
+      color: rgba(155, 155, 155, 1);
+      line-height: 16px;
+      display: block;
+      margin-top: 8px;
+    }
+  }
+
+  .item .item-inner {
+    display: inline;
+    border-bottom: 0px !important;
+  }
+
+  .item .label {
+    margin: 0 !important;
+  }
+
+  .ulItem {
+    margin-top: 7px;
+    font-size: 11px;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: rgba(155, 155, 155, 1);
+
+    li {
+      float: left;
+      margin: 0 8px 0 0; //上右下左
+      text-align: center;
+      height: 20px;
+      padding: 2px 6px 2px 6px;
+      border-radius: 2px;
+      line-height: 20px;
+    }
+  }
+}

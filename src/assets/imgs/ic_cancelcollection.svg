@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_cancelcollection</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="97.2791727%" id="linearGradient-1">
+            <stop stop-color="#FF759F" offset="0%"></stop>
+            <stop stop-color="#FF306F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="1.1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="收藏-食谱-有数据时" transform="translate(-319.000000, -229.000000)">
+            <g id="Group" transform="translate(-72.000000, 108.000000)">
+                <g id="Group-6" transform="translate(391.000000, 121.000000)">
+                    <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="40" height="40" rx="20"></rect>
+                    <g id="icon/ic_unlike_white" transform="translate(8.000000, 8.000000)">
+                        <g id="Group">
+                            <g id="icon/ic_unlike">
+                                <rect id="Rectangle-5" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="24" height="24"></rect>
+                                <path d="M9.55511895,18.2056607 C9.69278454,18.3012088 9.82782305,18.3945312 9.95962733,18.4857143 C10.4254658,18.8095238 11.0776398,19.3142857 11.9161491,20 C12.8664596,19.3142857 13.5745342,18.8095238 14.0403727,18.4857143 C16.8074534,16.5714286 21,13.7142857 21,9.11428571 C20.9939766,8.50471284 20.8828081,7.92035169 20.6841186,7.37864591 M18.7890873,4.91689808 C17.9626447,4.33878322 16.9611535,4 15.8850932,4 C14.3757764,4 12.8944099,4.68571429 11.9161491,5.82857143 C10.9378882,4.68571429 9.6242236,4 8.11490683,4 C5.29192547,4 3,6.28571429 3,9.11428571 C3,12.3309896 5.05014417,14.695441 7.22936577,16.481198" id="Shape" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero"></path>
+                                <rect id="Rectangle-6" fill="#FFFFFF" transform="translate(12.588835, 11.588835) rotate(45.000000) translate(-12.588835, -11.588835) " x="12.0888348" y="-0.0576118446" width="1" height="23.2928932" rx="0.5"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

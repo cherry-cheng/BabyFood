@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_history_del</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="97.2791727%" id="linearGradient-1">
+            <stop stop-color="#FF759F" offset="0%"></stop>
+            <stop stop-color="#FF306F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="收藏-浏览历史-有数据时" transform="translate(-319.000000, -229.000000)">
+            <g id="Group" transform="translate(-72.000000, 108.000000)">
+                <g id="Group-14" transform="translate(375.000000, 94.000000)">
+                    <g id="Group-7" transform="translate(16.000000, 27.000000)">
+                        <g id="icon/ic_history_del">
+                            <g>
+                                <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="40" height="40" rx="20"></rect>
+                                <g id="Group-11" transform="translate(8.000000, 8.000000)">
+                                    <rect id="Rectangle-5" fill="#D8D8D8" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                                    <g id="trash-2" transform="translate(3.272727, 4.363636)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline id="Shape" points="0 3.81818182 1.93939394 3.81818182 17.4545455 3.81818182"></polyline>
+                                        <path d="M15.5151515,3.81818182 L15.5151515,13.3636364 C15.5151515,14.4179982 14.6468553,15.2727273 13.5757576,15.2727273 L3.87878788,15.2727273 C2.80769018,15.2727273 1.93939394,14.4179982 1.93939394,13.3636364 L1.93939394,3.81818182 M4.84848485,3.81818182 L4.84848485,1.90909091 C4.84848485,0.854729114 5.71678109,0 6.78787879,0 L10.6666667,0 C11.7377644,0 12.6060606,0.854729114 12.6060606,1.90909091 L12.6060606,3.81818182" id="Shape"></path>
+                                        <path d="M6.78787879,6.68181818 L6.78787879,12.4090909" id="Shape"></path>
+                                        <path d="M10.6666667,6.68181818 L10.6666667,12.4090909" id="Shape"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

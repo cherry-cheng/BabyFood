@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_lists_about copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="97.2791727%" id="linearGradient-1">
+            <stop stop-color="#FF759F" offset="0%"></stop>
+            <stop stop-color="#FF306F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="1.1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的-未登录" transform="translate(-16.000000, -399.000000)">
+            <g id="Group-13-Copy-2" transform="translate(0.000000, 176.000000)">
+                <g id="列表/常规-copy-7" transform="translate(0.000000, 209.000000)">
+                    <rect id="Rectangle-10" fill="#FFFFFF" opacity="0" x="0" y="0" width="375" height="52"></rect>
+                    <rect id="Rectangle-3" fill="#D8D8D8" fill-rule="nonzero" opacity="0" x="16" y="14" width="24" height="24"></rect>
+                    <g id="关于" transform="translate(18.000000, 16.000000)">
+                        <g id="Group" transform="translate(-0.000000, 0.000000)">
+                            <path d="M8.7487623,20 C9.19057037,20 10.3837814,18.6084644 10.8254155,18.5650427 C15.4651744,17.9128667 19,14.0434106 19,9.34773635 C19,4.1737615 14.7580788,-8.29926405e-14 9.49982602,-8.29926405e-14 C4.24174717,-8.29926405e-14 6.99509894e-14,4.17393269 6.99509894e-14,9.34773635 C6.99509894e-14,13.9562076 3.40224921,17.7822484 7.90927957,18.5650427 C8.43951971,18.608635 8.21852868,20 8.74876665,20 L8.7487623,20 Z" id="Shape" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                            <path d="M9.5,8.73311579 C10.3279417,8.73346168 11.0005713,9.4800504 10.9999996,10.0713526 L11,15 C10.1882141,15 9.1187344,15 8,15 C7.99999994,11.7136783 8.00000003,10.0703782 8.00000026,10.0700999 C8.00048312,9.47875327 8.67205826,8.7327699 9.5,8.73311579 Z M8,6.51063137 L8.00016453,6.51062846 C8.00016453,5.6763182 8.67172382,4.99983458 9.50000104,5.00000003 C10.3284531,5.00009115 11,5.67646938 11,6.51079414 L11,6.51062871 L11,6.51244853 C10.9875177,7.32934402 10.3324568,7.9882557 9.52129295,7.99984483 C8.69285945,8.01168042 8.01175262,7.34493634 8,6.51063137 Z" id="Combined-Shape" fill="#FFFFFF" opacity="0.389999986"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
